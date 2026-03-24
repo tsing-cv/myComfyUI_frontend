@@ -1,0 +1,243 @@
+import QuickLRU from '@alloc/quick-lru'
+import { useRouteHash } from '@vueuse/router'
+import { defineStore } from 'pinia'
+import { computed, ref, shallowRef, watch } from 'vue'
+import { useRouter } from 'vue-router'
+
+import type { DragAndScaleState } from '@/lib/litegraph/src/DragAndScale'
+import type { Subgraph } from '@/lib/litegraph/src/litegraph'
+import { useWorkflowStore } from '@/platform/workflow/management/stores/workflowStore'
+import { useWorkflowService } from '@/platform/workflow/core/services/workflowService'
+import { useCanvasStore } from '@/renderer/core/canvas/canvasStore'
+import { app } from '@/scripts/app'
+import { findSubgraphPathById } from '@/utils/graphTraversalUtil'
+import { isNonNullish, isSubgraph } from '@/utils/typeGuardUtil'
+
+export const VIEWPORT_CACHE_MAX_SIZE = 32
+
+/**
+ * Stores the current subgraph navigation state; a stack representing subgraph
+ * navigation history from the root graph to the subgraph that is currently
+ * open.
+ */
+export const useSubgraphNavigationStore = defineStore(
+  'subgraphNavigation',
+  () => {
+    const workflowStore = useWorkflowStore()
+    const canvasStore = useCanvasStore()
+    const router = useRouter()
+    const routeHash = useRouteHash()
+
+    /** The currently opened subgraph. */
+    const activeSubgraph = shallowRef<Subgraph>()
+
+    /** The stack of subgraph IDs from the root graph to the currently opened subgraph. */
+    const idStack = ref<string[]>([])
+
+    /** LRU cache for viewport states. Key: subgraph ID or 'root' for root graph */
+    const viewportCache = new QuickLRU<string, DragAndScaleState>({
+      maxSize: VIEWPORT_CACHE_MAX_SIZE
+    })
+
+    /**
+     * Get the ID of the root graph for the currently active workflow.
+     * @returns The ID of the root graph for the currently active workflow.
+     */
+    const getCurrentRootGraphId = () => {
+      const canvas = canvasStore.getCanvas()
+      return canvas.graph?.rootGraph?.id ?? 'root'
+    }
+
+    /**
+     * A stack representing subgraph navigation history from the root graph to
+     * the current opened subgraph.
+     */
+    const navigationStack = computed(() =>
+      idStack.value
+        .map((id) => app.rootGraph.subgraphs.get(id))
+        .filter(isNonNullish)
+    )
+
+    /**
+     * Restore the navigation stack from a list of subgraph IDs.
+     * @param subgraphIds The list of subgraph IDs to restore the navigation stack from.
+     * @see exportState
+     */
+    const restoreState = (subgraphIds: string[]) => {
+      idStack.value.length = 0
+      for (const id of subgraphIds) idStack.value.push(id)
+    }
+
+    /**
+     * Export the navigation stack as a list of subgraph IDs.
+     * @returns The list of subgraph IDs, ending with the currently active subgraph.
+     * @see restoreState
+     */
+    const exportState = () => [...idStack.value]
+
+    /**
+     * Get the current viewport state.
+     * @returns The current viewport state, or null if the canvas is not available.
+     */
+    const getCurrentViewport = (): DragAndScaleState | null => {
+      const canvas = canvasStore.getCanvas()
+      if (!canvas) return null
+
+      return {
+        scale: canvas.ds.state.scale,
+        offset: [...canvas.ds.state.offset]
+      }
+    }
+
+    /**
+     * Save the current viewport state.
+     * @param graphId The graph ID to save for. Use 'root' for root graph, or omit to use current context.
+     */
+    const saveViewport = (graphId: string) => {
+      const viewport = getCurrentViewport()
+      if (!viewport) return
+
+      viewportCache.set(graphId, viewport)
+    }
+
+    /**
+     * Restore viewport state for a graph.
+     * @param graphId The graph ID to restore. Use 'root' for root graph, or omit to use current context.
+     */
+    const restoreViewport = (graphId: string) => {
+      const viewport = viewportCache.get(graphId)
+      if (!viewport) return
+
+      const canvas = app.canvas
+      if (!canvas) return
+
+      canvas.ds.scale = viewport.scale
+      canvas.ds.offset[0] = viewport.offset[0]
+      canvas.ds.offset[1] = viewport.offset[1]
+      canvas.setDirty(true, true)
+    }
+
+    /**
+     * Update the navigation stack when the active subgraph changes.
+     * @param subgraph The new active subgraph.
+     * @param prevSubgraph The previous active subgraph.
+     */
+    const onNavigated = (
+      subgraph: Subgraph | undefined,
+      prevSubgraph: Subgraph | undefined
+    ) => {
+      // Save viewport state for the graph we're leaving
+      if (prevSubgraph) {
+        // Leaving a subgraph
+        saveViewport(prevSubgraph.id)
+      } else if (!prevSubgraph && subgraph) {
+        // Leaving root graph to enter a subgraph
+        saveViewport(getCurrentRootGraphId())
+      }
+
+      const isInRootGraph = !subgraph
+      if (isInRootGraph) {
+        idStack.value.length = 0
+        restoreViewport(getCurrentRootGraphId())
+        return
+      }
+
+      const path = findSubgraphPathById(subgraph.rootGraph, subgraph.id)
+      const isInReachableSubgraph = !!path
+      if (isInReachableSubgraph) {
+        idStack.value = [...path]
+      } else {
+        // Treat as if opening a new subgraph
+        idStack.value = [subgraph.id]
+      }
+
+      // Always try to restore viewport for the target subgraph
+      restoreViewport(subgraph.id)
+    }
+
+    // Update navigation stack when opened subgraph changes (also triggers when switching workflows)
+    watch(
+      () => workflowStore.activeSubgraph,
+      (newValue, oldValue) => {
+        onNavigated(newValue, oldValue)
+      }
+    )
+
+    //Allow navigation with forward/back buttons
+    let blockHashUpdate = false
+    let initialLoad = true
+
+    async function navigateToHash(newHash: string) {
+      const root = app.rootGraph
+      const locatorId = newHash?.slice(1) || root.id
+      const canvas = canvasStore.getCanvas()
+      if (canvas.graph?.id === locatorId) return
+      const targetGraph =
+        (locatorId || root.id) !== root.id
+          ? root.subgraphs.get(locatorId)
+          : root
+      if (targetGraph) return canvas.setGraph(targetGraph)
+
+      //Search all open workflows
+      for (const workflow of workflowStore.openWorkflows) {
+        const { activeState } = workflow
+        if (!activeState) continue
+        const subgraphs = activeState.definitions?.subgraphs ?? []
+        for (const graph of [activeState, ...subgraphs]) {
+          if (graph.id !== locatorId) continue
+          //This will trigger a navigation, which can break forward history
+          try {
+            blockHashUpdate = true
+            await useWorkflowService().openWorkflow(workflow)
+          } finally {
+            blockHashUpdate = false
+          }
+          const targetGraph =
+            app.rootGraph.id === locatorId
+              ? app.rootGraph
+              : app.rootGraph.subgraphs.get(locatorId)
+          if (!targetGraph) {
+            console.error('subgraph poofed after load?')
+            return
+          }
+
+          return canvas.setGraph(targetGraph)
+        }
+      }
+    }
+
+    async function updateHash() {
+      if (blockHashUpdate) return
+      if (initialLoad) {
+        initialLoad = false
+        if (!routeHash.value) return
+        await navigateToHash(routeHash.value)
+        const graph = canvasStore.getCanvas().graph
+        if (isSubgraph(graph)) workflowStore.activeSubgraph = graph
+        return
+      }
+
+      const newId = canvasStore.getCanvas().graph?.id ?? ''
+      if (!routeHash.value) await router.replace('#' + app.rootGraph.id)
+      const currentId = routeHash.value?.slice(1)
+      if (!newId || newId === currentId) return
+
+      await router.push('#' + newId)
+    }
+    //update navigation hash
+    //NOTE: Doesn't apply on workflow load
+    watch(() => canvasStore.currentGraph, updateHash)
+    watch(routeHash, () => navigateToHash(String(routeHash.value)))
+
+    return {
+      activeSubgraph,
+      navigationStack,
+      restoreState,
+      exportState,
+      saveViewport,
+      restoreViewport,
+      updateHash,
+      viewportCache
+    }
+  }
+)

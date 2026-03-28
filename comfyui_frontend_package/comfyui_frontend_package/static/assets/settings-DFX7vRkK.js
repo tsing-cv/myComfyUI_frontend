@@ -6,7 +6,22 @@ const Comfy_Canvas_NavigationMode = {
   name: "画布导航模式",
   options: {
     "Drag Navigation": "拖动画布",
-    "Standard (New)": "标准（新）"
+    "Standard (New)": "标准（新）",
+    "Custom": "自定义"
+  }
+};
+const Comfy_Canvas_LeftMouseClickBehavior = {
+  name: "左键单击行为",
+  options: {
+    "Panning": "平移",
+    "Select": "选择",
+  }
+};
+const Comfy_Canvas_MouseWheelScroll = {
+  name: "鼠标滚轮滚动行为",
+  options: {
+    "Panning": "平移",
+    "Zoom in/out": "缩放",
   }
 };
 const Comfy_Canvas_SelectionToolbox = {
@@ -284,6 +299,13 @@ const Comfy_Sidebar_Size = {
     small: "小"
   }
 };
+const Comfy_Sidebar_Style = {
+  name: "侧边栏样式",
+  options: {
+    floating: "浮动",
+    connected: "连接"
+  }
+};
 const Comfy_Sidebar_UnifiedWidth = {
   name: "统一侧边栏宽度"
 };
@@ -409,6 +431,8 @@ const settings = {
   },
   Comfy_Canvas_BackgroundImage,
   Comfy_Canvas_NavigationMode,
+  Comfy_Canvas_LeftMouseClickBehavior,
+  Comfy_Canvas_MouseWheelScroll,
   Comfy_Canvas_SelectionToolbox,
   Comfy_ConfirmClear,
   Comfy_DOMClippingEnabled,
@@ -472,6 +496,7 @@ const settings = {
   Comfy_Queue_MaxHistoryItems,
   Comfy_Sidebar_Location,
   Comfy_Sidebar_Size,
+  Comfy_Sidebar_Style,
   Comfy_Sidebar_UnifiedWidth,
   Comfy_SnapToGrid_GridSize,
   Comfy_TextareaWidget_FontSize,
@@ -500,6 +525,8 @@ const settings = {
 export {
   Comfy_Canvas_BackgroundImage,
   Comfy_Canvas_NavigationMode,
+  Comfy_Canvas_LeftMouseClickBehavior,
+  Comfy_Canvas_MouseWheelScroll,
   Comfy_Canvas_SelectionToolbox,
   Comfy_ConfirmClear,
   Comfy_DOMClippingEnabled,
@@ -563,6 +590,7 @@ export {
   Comfy_Queue_MaxHistoryItems,
   Comfy_Sidebar_Location,
   Comfy_Sidebar_Size,
+  Comfy_Sidebar_Style,
   Comfy_Sidebar_UnifiedWidth,
   Comfy_SnapToGrid_GridSize,
   Comfy_TextareaWidget_FontSize,

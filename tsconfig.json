@@ -20,23 +20,23 @@
     "allowJs": true,
     "verbatimModuleSyntax": true,
     "paths": {
-      "@/*": ["src/*"],
+      "@/*": ["./src/*"],
       "@/utils/formatUtil": [
-        "packages/shared-frontend-utils/src/formatUtil.ts"
+        "./packages/shared-frontend-utils/src/formatUtil.ts"
       ],
       "@/utils/networkUtil": [
-        "packages/shared-frontend-utils/src/networkUtil.ts"
+        "./packages/shared-frontend-utils/src/networkUtil.ts"
       ],
-      "@tests-ui/*": ["tests-ui/*"]
+      "@tests-ui/*": ["./tests-ui/*"]
     },
-    "typeRoots": ["src/types", "node_modules/@types", "node_modules"],
+    "typeRoots": ["src/types", "node_modules/@types", "./node_modules"],
     "types": [
       "vitest/globals",
       "@webgpu/types",
       "@testing-library/jest-dom/vitest"
     ],
-    "outDir": "dist",
-    "rootDir": ""
+    "outDir": "./dist",
+    "rootDir": "./"
   },
   "include": [
     ".storybook/**/*",

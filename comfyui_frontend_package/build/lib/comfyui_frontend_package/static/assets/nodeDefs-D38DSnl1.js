@@ -9147,6 +9147,51 @@ const CustomCombo = {
 const ResolutionSelector = {
   display_name: "分辨率选择器",
 };
+const FluxKVCache = {
+  description: "为 Flux 系列模型的参考图像启用 KV Cache 优化。",
+  display_name: "Flux KV缓存",
+  inputs: {
+    model: {
+      name: "模型"
+    }
+  },
+  outputs: {
+    "0": {
+      tooltip: "启用 KV Cache 后的修补模型。"
+    }
+  }
+};
+const LTXVNormalizingSampler = {
+  display_name: "LTXV 归一化采样器",
+  inputs: {
+    noise: {
+      name: "噪波"
+    },
+    guider: {
+      name: "引导器"
+    },
+    sampler: {
+      name: "采样器"
+    },
+    sigmas: {
+      name: "Sigmas"
+    },
+    latent_image: {
+      name: "Latent图像"
+    },
+    video_normalization_factors: {
+      name: "视频归一化系数"
+    },
+    audio_normalization_factors: {
+      name: "音频归一化系数"
+    }
+  },
+  outputs: {
+    "0": {
+      name: "降噪输出"
+    }
+  }
+};
 const ColorToRGBInt = {
   display_name: "颜色转RGB整数",
 };
@@ -9194,6 +9239,166 @@ const MoltbotPromptPlanner = {
     },
     "2": {
       name: "参数 JSON"
+    }
+  }
+};
+const KontextPresetNode = {
+  description: "使用 Kontext 预设分析输入图像，并生成可直接用于创作的中文创意指令。",
+  display_name: "✨Kontext 预设助手",
+  inputs: {
+    image: {
+      name: "输入图像",
+      tooltip: "要分析的图像。"
+    },
+    kontext_preset: {
+      name: "Kontext 预设",
+      tooltip: "选择要应用的 Kontext 预设模板。"
+    },
+    user_prompt: {
+      name: "补充要求",
+      tooltip: "补充额外要求，将与预设一起发送给模型。"
+    },
+    vlm_service: {
+      name: "视觉模型服务",
+      tooltip: "选择用于图像分析的 VLM 服务与模型。"
+    },
+    ollama_auto_unload: {
+      name: "Ollama 自动卸载",
+      tooltip: "生成完成后自动卸载 Ollama 模型。"
+    }
+  },
+  outputs: {
+    "0": {
+      name: "创意指令",
+      tooltip: "根据图像与预设生成的创意转换指令。"
+    }
+  }
+};
+const PromptTranslate = {
+  description: "将输入文本翻译为目标语言，适合提示词翻译与中英文互转。",
+  display_name: "✨提示词翻译",
+  inputs: {
+    source_text: {
+      name: "待翻译文本",
+      tooltip: "输入需要翻译的文本内容。"
+    },
+    target_language: {
+      name: "目标语言",
+      tooltip: "选择要翻译到的目标语言。"
+    },
+    translate_service: {
+      name: "翻译服务",
+      tooltip: "选择翻译服务与模型。"
+    },
+    ollama_auto_unload: {
+      name: "Ollama 自动卸载",
+      tooltip: "生成完成后自动卸载 Ollama 模型。"
+    }
+  },
+  outputs: {
+    "0": {
+      name: "翻译结果",
+      tooltip: "翻译后的文本结果。"
+    }
+  }
+};
+const PromptExpand = {
+  description: "基于规则模板或临时规则增强原始提示词，输出更完整、更易用于生成的提示文本。",
+  display_name: "✨提示词增强",
+  inputs: {
+    rule: {
+      name: "规则模板",
+      tooltip: "选择用于增强提示词的规则模板。"
+    },
+    custom_rule: {
+      name: "启用临时规则",
+      tooltip: "启用后将使用下方临时规则内容，而不是预设模板。"
+    },
+    custom_rule_content: {
+      name: "临时规则内容",
+      tooltip: "输入临时规则内容，仅在启用临时规则时生效。"
+    },
+    user_prompt: {
+      name: "用户提示词",
+      tooltip: "输入要增强或优化的原始提示词。"
+    },
+    llm_service: {
+      name: "大语言模型服务",
+      tooltip: "选择用于增强提示词的 LLM 服务与模型。"
+    },
+    ollama_auto_unload: {
+      name: "Ollama 自动卸载",
+      tooltip: "生成完成后自动卸载 Ollama 模型。"
+    },
+    source_text: {
+      name: "原文输入",
+      tooltip: "可选的输入文本，会与上方内容一起参与增强。"
+    }
+  },
+  outputs: {
+    "0": {
+      name: "增强结果",
+      tooltip: "增强后的提示词文本。"
+    }
+  }
+};
+const VideoCaptionNode = {
+  description: "分析视频或图像序列内容，生成可用于视频理解、反推或创作的提示词输出。",
+  display_name: "✨视频反推",
+  inputs: {
+    rule: {
+      name: "规则模板",
+      tooltip: "选择用于视频分析的提示词规则模板。"
+    },
+    custom_rule: {
+      name: "启用临时规则",
+      tooltip: "启用后将使用下方临时规则内容，而不是预设模板。"
+    },
+    custom_rule_content: {
+      name: "临时规则内容",
+      tooltip: "输入临时规则内容，仅在启用临时规则时生效。"
+    },
+    user_prompt: {
+      name: "补充要求",
+      tooltip: "输入额外要求，将与规则一起发送给模型。"
+    },
+    vlm_service: {
+      name: "多模态模型服务",
+      tooltip: "选择用于视频理解的 VLM 服务与模型。"
+    },
+    sampling_mode: {
+      name: "抽帧模式",
+      tooltip: "选择自动抽帧或手动指定帧索引。"
+    },
+    frame_count: {
+      name: "抽帧数量",
+      tooltip: "自动模式下采样的帧数量。"
+    },
+    manual_indices: {
+      name: "手动帧索引",
+      tooltip: "手动模式下输入帧索引或区间。"
+    },
+    ollama_auto_unload: {
+      name: "Ollama 自动卸载",
+      tooltip: "生成完成后自动卸载 Ollama 模型。"
+    },
+    video: {
+      name: "视频输入",
+      tooltip: "输入要分析的视频。"
+    },
+    image_sequence: {
+      name: "图像序列",
+      tooltip: "可选的图像序列输入，用于替代视频分析。"
+    }
+  },
+  outputs: {
+    "0": {
+      name: "提示词输出",
+      tooltip: "根据视频内容生成的提示词结果。"
+    },
+    "1": {
+      name: "预览帧",
+      tooltip: "分析过程中采样得到的预览帧。"
     }
   }
 };
@@ -9430,6 +9635,8 @@ const nodeDefs = {
   ResizeAndPadImage,
   CustomCombo,
   ResolutionSelector,
+  FluxKVCache,
+  LTXVNormalizingSampler,
   ColorToRGBInt,
   Painter,
   LoadImageFromURL,
@@ -9628,6 +9835,10 @@ const nodeDefs = {
   MoltbotBatchVariants,
   MoltbotImageToPrompt,
   MoltbotPromptRefiner,
+  KontextPresetNode,
+  PromptTranslate,
+  PromptExpand,
+  VideoCaptionNode,
   SV3D_Conditioning,
   SVD_img2vid_Conditioning,
   SamplerCustom,
@@ -9851,6 +10062,8 @@ export {
   ResizeAndPadImage,
   CustomCombo,
   ResolutionSelector,
+  FluxKVCache,
+  LTXVNormalizingSampler,
   ColorToRGBInt,
   Painter,
   LoadImageFromURL,
@@ -10049,6 +10262,10 @@ export {
   MoltbotBatchVariants,
   MoltbotImageToPrompt,
   MoltbotPromptRefiner,
+  KontextPresetNode,
+  PromptTranslate,
+  PromptExpand,
+  VideoCaptionNode,
   SV3D_Conditioning,
   SVD_img2vid_Conditioning,
   SamplerCustom,
@@ -10151,4 +10368,3 @@ export {
   unCLIPCheckpointLoader,
   unCLIPConditioning
 };
-

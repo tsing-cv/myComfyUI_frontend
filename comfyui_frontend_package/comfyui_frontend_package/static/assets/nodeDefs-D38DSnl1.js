@@ -1981,13 +1981,26 @@ const IdeogramV3 = {
   }
 };
 const ImageBatch = {
-  display_name: "组合图像批次",
+  display_name: "图像合并成批",
+  description: "将多个图像组合成图像批次。",
+};
+const GetImageSize = {
+  display_name: "获取图像尺寸",
+  description: "返回图像宽度和高度并透传原图。",
   inputs: {
-    image1: {
-      name: "图像1"
+    image: {
+      name: "图像"
+    }
+  },
+  outputs: {
+    "0": {
+      name: "宽度"
     },
-    image2: {
-      name: "图像2"
+    "1": {
+      name: "高度"
+    },
+    "2": {
+      name: "批次大小"
     }
   }
 };
@@ -3842,12 +3855,38 @@ const MaskComposite = {
     }
   }
 };
+const ImageAddNoise = {
+  description: "将噪声添加到图像，用于模拟胶片颗粒或增强纹理。",
+  display_name: "图像加噪 (ImageAddNoise)",
+  inputs: {
+    image: {
+      name: "图像"
+    },
+    seed: {
+      name: "种子",
+      tooltip: "用于生成随机噪声的随机种子。"
+    },
+    strength: {
+      name: "强度",
+      tooltip: "噪声强度，从0到1。"
+    }
+  },
+  outputs: {
+    "0": {
+      name: "图像"
+    }
+  }
+};
+const BatchMasksNode = {
+  description: "批处理多个遮罩，将它们组合成一个遮罩批次。",
+  display_name: "遮罩合并成批",
+};
 const MaskPreview = {
-  description: "将输入图像保存到您的 ComfyUI 输出目录。",
-  display_name: "MaskPreview",
+  description: "将输入遮罩保存到您的 ComfyUI 输出目录。",
+  display_name: "遮罩预览",
   inputs: {
     mask: {
-      name: "mask"
+      name: "遮罩"
     }
   }
 };
@@ -6524,11 +6563,11 @@ const PrimitiveStringMultiline = {
     }
   }
 };
-const FB_Qvwen3TTSConfig = {
+const FB_Qwen3TTSConfig = {
   description: "使用 Qwen3-TTS 的配置功能。",
   display_name: "Qwen3-TTS配置（停顿控制）",
 };
-const FB_Qvwen3TTSCustomVoice = {
+const FB_Qwen3TTSCustomVoice = {
   description: "使用 Qwen3-TTS 的自定义声音功能。",
   display_name: "Qwen3-TTS自定义声音",
   config: {
@@ -6540,7 +6579,7 @@ const FB_Qvwen3TTSCustomVoice = {
     }   
   }
 };
-const FB_Qvwen3TTSDialogueInference = {
+const FB_Qwen3TTSDialogueInference = {
   description: "使用 Qwen3-TTS 的对话推理功能将文本转换为音频。",
   display_name: "Qwen3-TTS对话推理",
   inputs: {
@@ -6554,7 +6593,7 @@ const FB_Qvwen3TTSDialogueInference = {
     }
   }
 };
-const FB_Qvwen3TTSLoadSpeaker = {
+const FB_Qwen3TTSLoadSpeaker = {
   description: "使用 Qwen3-TTS 的加载说话人功能将文本转换为音频。",
   display_name: "Qwen3-TTS加载说话人",
   outputs: {
@@ -6569,7 +6608,7 @@ const FB_Qvwen3TTSLoadSpeaker = {
     }
   }
 };
-const FB_Qvwen3TTSRoleBank = {
+const FB_Qwen3TTSRoleBank = {
   description: "使用 Qwen3-TTS 的角色银行功能将文本转换为音频。",
   display_name: "Qwen3-TTS角色银行",
   inputs: {
@@ -6604,7 +6643,7 @@ const FB_Qvwen3TTSRoleBank = {
     }
   }
 };
-const FB_Qvwen3TTSSaveVoice = {
+const FB_Qwen3TTSSaveVoice = {
   description: "使用 Qwen3-TTS 的保存音频功能将音频保存到文件。",
   display_name: "Qwen3-TTS保存音频",
   inputs: {
@@ -6616,11 +6655,11 @@ const FB_Qvwen3TTSSaveVoice = {
     }
   }
 };
-const FB_Qvwen3TTSTrain = {
+const FB_Qwen3TTSTrain = {
   description: "使用 Qwen3-TTS 的训练功能将文本转换为音频。",
   display_name: "Qwen3-TTS训练",
 };
-const FB_Qvwen3TTSVoiceClone = {
+const FB_Qwen3TTSVoiceClone = {
   description: "使用 Qwen3-TTS 的语音克隆功能将文本转换为音频。",
   display_name: "Qwen3-TTS语音克隆",
   inputs: {
@@ -6640,7 +6679,7 @@ const FB_Qvwen3TTSVoiceClone = {
     }
   }
 };
-const FB_Qvwen3TTSVoiceClonePrompt = {
+const FB_Qwen3TTSVoiceClonePrompt = {
   description: "使用 Qwen3-TTS 的语音克隆功能将文本转换为音频。",
   display_name: "Qwen3-TTS语音克隆提示词",
   inputs: {
@@ -6654,7 +6693,7 @@ const FB_Qvwen3TTSVoiceClonePrompt = {
     }
   }
 };
-const FB_Qvwen3TTSVoiceDesign = {
+const FB_Qwen3TTSVoiceDesign = {
   description: "使用 Qwen3-TTS 的语音设计功能将文本转换为音频。",
   display_name: "Qwen3-TTS语音设计",
   inputs: {
@@ -7132,6 +7171,235 @@ const SD_4XUpscale_Conditioning = {
     },
     "2": {
       name: "Latent"
+    }
+  }
+};
+const Seedance2ApiKey = {
+  display_name: "🔑 Seedance2 API密钥",
+  inputs: {
+    api_key: {
+      name: "API密钥"
+    }
+  },
+  outputs: {
+    "0": {
+      name: "API密钥"
+    }
+  }
+};
+const Seedance2TextToVideo = {
+  display_name: "🌱 Seedance2 文本到视频",
+  inputs: {
+    prompt: {
+      name: "提示"
+    },
+    aspect_ratio: {
+      name: "宽高比"
+    },
+    quality: {
+      name: "质量"
+    },
+    duration: {
+      name: "时长"
+    },
+    api_key: {
+      name: "API密钥"
+    }
+  },
+  outputs: {
+    "0": {
+      name: "视频URL"
+    },
+    "1": {
+      name: "首帧图像"
+    },
+    "2": {
+      name: "请求ID"
+    }
+  }
+};
+const Seedance2ImageToVideo = {
+  display_name: "🌱 Seedance2 图像到视频",
+  inputs: {
+    prompt: {
+      name: "提示"
+    },
+    aspect_ratio: {
+      name: "宽高比"
+    },
+    quality: {
+      name: "质量"
+    },
+    duration: {
+      name: "时长"
+    },
+    api_key: {
+      name: "API密钥"
+    },
+    image_1: {
+      name: "图像1"
+    },
+    image_2: {
+      name: "图像2"
+    },
+    image_3: {
+      name: "图像3"
+    },
+    image_4: {
+      name: "图像4"
+    },
+    image_5: {
+      name: "图像5"
+    },
+    image_6: {
+      name: "图像6"
+    },
+    image_7: {
+      name: "图像7"
+    },
+    image_8: {
+      name: "图像8"
+    },
+    image_9: {
+      name: "图像9"
+    }
+  },
+  outputs: {
+    "0": {
+      name: "视频URL"
+    },
+    "1": {
+      name: "首帧图像"
+    },
+    "2": {
+      name: "请求ID"
+    }
+  }
+};
+const Seedance2Extend = {
+  display_name: "🌱 Seedance2 扩展视频",
+  inputs: {
+    request_id: {
+      name: "请求ID"
+    },
+    quality: {
+      name: "质量"
+    },
+    duration: {
+      name: "时长"
+    },
+    api_key: {
+      name: "API密钥"
+    },
+    prompt: {
+      name: "提示"
+    }
+  },
+  outputs: {
+    "0": {
+      name: "视频URL"
+    },
+    "1": {
+      name: "首帧图像"
+    },
+    "2": {
+      name: "新请求ID"
+    }
+  }
+};
+const Seedance2Omni = {
+  display_name: "🌱 Seedance2全能视频",
+  inputs: {
+    prompt: {
+      name: "提示词"
+    },
+    aspect_ratio: {
+      name: "宽高比"
+    },
+    duration: {
+      name: "时长"
+    },
+    api_key: {
+      name: "API密钥"
+    },
+    image_1: {
+      name: "图像1"
+    },
+    image_2: {
+      name: "图像2"
+    },
+    image_3: {
+      name: "图像3"
+    },
+    image_4: {
+      name: "图像4"
+    },
+    image_5: {
+      name: "图像5"
+    },
+    image_6: {
+      name: "图像6"
+    },
+    image_7: {
+      name: "图像7"
+    },
+    image_8: {
+      name: "图像8"
+    },
+    image_9: {
+      name: "图像9"
+    },
+    video_url_1: {
+      name: "视频URL1"
+    },
+    video_url_2: {
+      name: "视频URL2"
+    },
+    video_url_3: {
+      name: "视频URL3"
+    },
+    audio_url_1: {
+      name: "音频URL1"
+    },
+    audio_url_2: {
+      name: "音频URL2"
+    },
+    audio_url_3: {
+      name: "音频URL3"
+    }
+  },  
+  outputs: {
+    video_url: {
+      name: "视频URL"
+    },
+    first_frame: {
+      name: "首帧图像"
+    },
+    new_request_id: {
+      name: "新请求ID"
+    }
+  }
+};
+const Seedance2VideoSaver = {
+  display_name: "Seedance2 保存视频",
+  inputs: {
+    video_url: {
+      name: "视频URL"
+    },
+    save_subfolder: {
+      name: "保存子文件夹"
+    },
+    filename_prefix: {
+      name: "文件名前缀"
+    },
+    frame_load_cap: {
+      name: "帧加载上限"
+    },
+    skip_first_frames: {
+      name: "跳过首帧"
+    },
+    select_every_nth: {
+      name: "每N帧选择"
     }
   }
 };
@@ -8882,8 +9150,168 @@ const ResolutionSelector = {
 const ColorToRGBInt = {
   display_name: "颜色转RGB整数",
 };
+const Painter = {
+  display_name: "指定颜色生成遮罩",
+};
+const LoadImageFromURL = {
+  display_name: "从URL加载图像",
+  inputs: {
+    url: {
+      name: "图片URL"
+    }
+  },
+  outputs: {
+    "0": {
+      name: "图像"
+    },
+    "1": {
+      name: "URL"
+    }
+  }
+};
+const MoltbotPromptPlanner = {
+  display_name: "OpenClaw 提示规划",
+  inputs: {
+    profile: {
+      name: "配置档"
+    },
+    requirements: {
+      name: "需求"
+    },
+    style_directives: {
+      name: "风格指令"
+    },
+    seed: {
+      name: "种子"
+    }
+  },
+  outputs: {
+    "0": {
+      name: "正面提示"
+    },
+    "1": {
+      name: "负面提示"
+    },
+    "2": {
+      name: "参数 JSON"
+    }
+  }
+};
+const MoltbotBatchVariants = {
+  display_name: "OpenClaw 批量变体",
+  inputs: {
+    positive: {
+      name: "正面提示"
+    },
+    negative: {
+      name: "负面提示"
+    },
+    count: {
+      name: "数量"
+    },
+    seed_base: {
+      name: "基础种子"
+    },
+    seed_policy: {
+      name: "种子策略"
+    },
+    variant_policy: {
+      name: "变体策略"
+    },
+    params_json: {
+      name: "参数 JSON"
+    },
+    sweep_start: {
+      name: "扫动起始"
+    },
+    sweep_end: {
+      name: "扫动结束"
+    }
+  },
+  outputs: {
+    "0": {
+      name: "正面提示列表"
+    },
+    "1": {
+      name: "负面提示列表"
+    },
+    "2": {
+      name: "参数 JSON 列表"
+    }
+  }
+};
+const MoltbotImageToPrompt = {
+  display_name: "OpenClaw 图像到提示",
+  inputs: {
+    image: {
+      name: "图像"
+    },
+    goal: {
+      name: "目标"
+    },
+    detail_level: {
+      name: "细节等级"
+    },
+    max_image_side: {
+      name: "最大边长"
+    }
+  },
+  outputs: {
+    "0": {
+      name: "图像说明"
+    },
+    "1": {
+      name: "标签"
+    },
+    "2": {
+      name: "提示建议"
+    }
+  }
+};
+const MoltbotPromptRefiner = {
+  display_name: "OpenClaw 提示优化",
+  inputs: {
+    image: {
+      name: "图像"
+    },
+    orig_positive: {
+      name: "原始正面提示"
+    },
+    orig_negative: {
+      name: "原始负面提示"
+    },
+    issue: {
+      name: "问题类型"
+    },
+    params_json: {
+      name: "参数 JSON"
+    },
+    goal: {
+      name: "目标"
+    },
+    max_image_side: {
+      name: "最大边长"
+    }
+  },
+  outputs: {
+    "0": {
+      name: "优化后正面提示"
+    },
+    "1": {
+      name: "优化后负面提示"
+    },
+    "2": {
+      name: "参数修补 JSON"
+    },
+    "3": {
+      name: "优化说明"
+    }
+  }
+};
 const nodeDefs = {
   AddNoise,
+  ImageAddNoise,
+  BatchMasksNode,
   AlignYourStepsScheduler,
   AudioAdjustVolume,
   AudioConcat,
@@ -8980,6 +9408,7 @@ const nodeDefs = {
   GLIGENLoader,
   GLIGENTextBoxApply,
   GetVideoComponents,
+  GetImageSize,
   GrowMask,
   Hunyuan3Dv2Conditioning,
   Hunyuan3Dv2ConditioningMultiView,
@@ -9002,6 +9431,8 @@ const nodeDefs = {
   CustomCombo,
   ResolutionSelector,
   ColorToRGBInt,
+  Painter,
+  LoadImageFromURL,
   ImageFromBatch,
   ImageInvert,
   ImageOnlyCheckpointLoader,
@@ -9151,16 +9582,16 @@ const nodeDefs = {
   PrimitiveInt,
   PrimitiveString,
   PrimitiveStringMultiline,
-  FB_Qvwen3TTSConfig,
-  FB_Qvwen3TTSCustomVoice,
-  FB_Qvwen3TTSDialogueInference,
-  FB_Qvwen3TTSLoadSpeaker,
-  FB_Qvwen3TTSRoleBank,
-  FB_Qvwen3TTSSaveVoice,
-  FB_Qvwen3TTSTrain,
-  FB_Qvwen3TTSVoiceClone,
-  FB_Qvwen3TTSVoiceClonePrompt,
-  FB_Qvwen3TTSVoiceDesign,
+  FB_Qwen3TTSConfig,
+  FB_Qwen3TTSCustomVoice,
+  FB_Qwen3TTSDialogueInference,
+  FB_Qwen3TTSLoadSpeaker,
+  FB_Qwen3TTSRoleBank,
+  FB_Qwen3TTSSaveVoice,
+  FB_Qwen3TTSTrain,
+  FB_Qwen3TTSVoiceClone,
+  FB_Qwen3TTSVoiceClonePrompt,
+  FB_Qwen3TTSVoiceDesign,
   QuadrupleCLIPLoader,
   RandomNoise,
   RebatchImages,
@@ -9187,6 +9618,16 @@ const nodeDefs = {
   RescaleCFG,
   SDTurboScheduler,
   SD_4XUpscale_Conditioning,
+  Seedance2ApiKey,
+  Seedance2Extend,
+  Seedance2ImageToVideo,
+  Seedance2TextToVideo,
+  Seedance2Omni,
+  Seedance2VideoSaver,
+  MoltbotPromptPlanner,
+  MoltbotBatchVariants,
+  MoltbotImageToPrompt,
+  MoltbotPromptRefiner,
   SV3D_Conditioning,
   SVD_img2vid_Conditioning,
   SamplerCustom,
@@ -9297,6 +9738,7 @@ export {
   BasicGuider,
   BasicScheduler,
   BetaSamplingScheduler,
+  BatchMasksNode,
   CFGGuider,
   CFGZeroStar,
   CLIPAttentionMultiply,
@@ -9386,6 +9828,7 @@ export {
   GLIGENLoader,
   GLIGENTextBoxApply,
   GetVideoComponents,
+  GetImageSize,
   GrowMask,
   Hunyuan3Dv2Conditioning,
   Hunyuan3Dv2ConditioningMultiView,
@@ -9395,6 +9838,7 @@ export {
   IdeogramV1,
   IdeogramV2,
   IdeogramV3,
+  ImageAddNoise,
   ImageBatch,
   ImageBlend,
   ImageBlur,
@@ -9408,6 +9852,8 @@ export {
   CustomCombo,
   ResolutionSelector,
   ColorToRGBInt,
+  Painter,
+  LoadImageFromURL,
   ImageFromBatch,
   ImageInvert,
   ImageOnlyCheckpointLoader,
@@ -9557,16 +10003,16 @@ export {
   PrimitiveInt,
   PrimitiveString,
   PrimitiveStringMultiline,
-  FB_Qvwen3TTSConfig,
-  FB_Qvwen3TTSCustomVoice,
-  FB_Qvwen3TTSDialogueInference,
-  FB_Qvwen3TTSLoadSpeaker,
-  FB_Qvwen3TTSRoleBank,
-  FB_Qvwen3TTSSaveVoice,
-  FB_Qvwen3TTSTrain,
-  FB_Qvwen3TTSVoiceClone,
-  FB_Qvwen3TTSVoiceClonePrompt,
-  FB_Qvwen3TTSVoiceDesign,
+  FB_Qwen3TTSConfig,
+  FB_Qwen3TTSCustomVoice,
+  FB_Qwen3TTSDialogueInference,
+  FB_Qwen3TTSLoadSpeaker,
+  FB_Qwen3TTSRoleBank,
+  FB_Qwen3TTSSaveVoice,
+  FB_Qwen3TTSTrain,
+  FB_Qwen3TTSVoiceClone,
+  FB_Qwen3TTSVoiceClonePrompt,
+  FB_Qwen3TTSVoiceDesign,
   QuadrupleCLIPLoader,
   RandomNoise,
   RebatchImages,
@@ -9593,6 +10039,16 @@ export {
   RescaleCFG,
   SDTurboScheduler,
   SD_4XUpscale_Conditioning,
+  Seedance2ApiKey,
+  Seedance2Extend,
+  Seedance2ImageToVideo,
+  Seedance2TextToVideo,
+  Seedance2Omni,
+  Seedance2VideoSaver,
+  MoltbotPromptPlanner,
+  MoltbotBatchVariants,
+  MoltbotImageToPrompt,
+  MoltbotPromptRefiner,
   SV3D_Conditioning,
   SVD_img2vid_Conditioning,
   SamplerCustom,

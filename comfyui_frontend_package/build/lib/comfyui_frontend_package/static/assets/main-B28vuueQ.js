@@ -1110,6 +1110,7 @@ const nodeCategories = {
   model_merging: "模型合并",
   model_patches: "模型微调",
   model_specific: "模型特定",
+  moltbot: "龙虾机器人",
   motion_tracking: "运动跟踪",
   noise: "噪波",
   operations: "操作",

@@ -9199,7 +9199,7 @@ const Painter = {
   display_name: "指定颜色生成遮罩",
 };
 const LoadImageFromURL = {
-  display_name: "从URL加载图像",
+  display_name: "加载图像（从URL）",
   inputs: {
     url: {
       name: "图片URL"

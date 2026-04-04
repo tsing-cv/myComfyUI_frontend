@@ -333,6 +333,13 @@ const Comfy_UseNewMenu = {
 const Comfy_Validation_Workflows = {
   name: "校验工作流"
 };
+const Comfy_VueNodes_AutoScaleLayout = {
+  name: "自动缩放布局",
+  tooltip: "在添加新节点时自动调整布局以适应新节点。"
+};
+const Comfy_VueNodes_Enabled = {
+  name: "启用Vue节点"
+};
 const Comfy_WidgetControlMode = {
   name: "组件控制模式",
   options: {
@@ -504,6 +511,8 @@ const settings = {
   Comfy_TreeExplorer_ItemPadding,
   Comfy_UseNewMenu,
   Comfy_Validation_Workflows,
+  Comfy_VueNodes_AutoScaleLayout,
+  Comfy_VueNodes_Enabled,
   Comfy_WidgetControlMode,
   Comfy_Window_UnloadConfirmation,
   Comfy_Workflow_AutoSave,
@@ -598,6 +607,8 @@ export {
   Comfy_TreeExplorer_ItemPadding,
   Comfy_UseNewMenu,
   Comfy_Validation_Workflows,
+  Comfy_VueNodes_AutoScaleLayout,
+  Comfy_VueNodes_Enabled,
   Comfy_WidgetControlMode,
   Comfy_Window_UnloadConfirmation,
   Comfy_Workflow_AutoSave,

@@ -1086,6 +1086,7 @@ const nodeCategories = {
   dataset: "数据集",  
   debug: "调试",
   deprecated: "已弃用",
+  detection: "目标检测",
   flux: "Flux",
   gligen: "GLIGEN",
   guidance: "引导",

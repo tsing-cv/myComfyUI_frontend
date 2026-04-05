@@ -1,9 +1,67 @@
 import type { Page, Route } from '@playwright/test'
+import type { JobsListResponse } from '@comfyorg/ingest-types'
 
 import type { RawJobListItem } from '../../../src/platform/remote/comfyui/jobs/jobTypes'
 
 const jobsListRoutePattern = /\/api\/jobs(?:\?.*)?$/
 const inputFilesRoutePattern = /\/internal\/files\/input(?:\?.*)?$/
+
+/** Factory to create a mock completed job with preview output. */
+export function createMockJob(
+  overrides: Partial<RawJobListItem> & { id: string }
+): RawJobListItem {
+  const now = Date.now()
+  return {
+    status: 'completed',
+    create_time: now,
+    execution_start_time: now,
+    execution_end_time: now + 5000,
+    preview_output: {
+      filename: `output_${overrides.id}.png`,
+      subfolder: '',
+      type: 'output',
+      nodeId: '1',
+      mediaType: 'images'
+    },
+    outputs_count: 1,
+    priority: 0,
+    ...overrides
+  }
+}
+
+/** Create multiple mock jobs with sequential IDs and staggered timestamps. */
+export function createMockJobs(
+  count: number,
+  baseOverrides?: Partial<RawJobListItem>
+): RawJobListItem[] {
+  const now = Date.now()
+  return Array.from({ length: count }, (_, i) =>
+    createMockJob({
+      id: `job-${String(i + 1).padStart(3, '0')}`,
+      create_time: now - i * 60_000,
+      execution_start_time: now - i * 60_000,
+      execution_end_time: now - i * 60_000 + 5000 + i * 1000,
+      preview_output: {
+        filename: `image_${String(i + 1).padStart(3, '0')}.png`,
+        subfolder: '',
+        type: 'output',
+        nodeId: '1',
+        mediaType: 'images'
+      },
+      ...baseOverrides
+    })
+  )
+}
+
+/** Create mock imported file names with various media types. */
+export function createMockImportedFiles(count: number): string[] {
+  const extensions = ['png', 'jpg', 'mp4', 'wav', 'glb', 'txt']
+  return Array.from(
+    { length: count },
+    (_, i) =>
+      `imported_${String(i + 1).padStart(3, '0')}.${extensions[i % extensions.length]}`
+  )
+}
 
 function parseLimit(url: URL, total: number): number {
   const value = Number(url.searchParams.get('limit'))
@@ -86,18 +144,23 @@ export class AssetsHelper {
       const limit = parseLimit(url, total)
       const visibleJobs = filteredJobs.slice(offset, offset + limit)
 
+      const response = {
+        jobs: visibleJobs,
+        pagination: {
+          offset,
+          limit,
+          total,
+          has_more: offset + visibleJobs.length < total
+        }
+      } satisfies {
+        jobs: unknown[]
+        pagination: JobsListResponse['pagination']
+      }
+
       await route.fulfill({
         status: 200,
         contentType: 'application/json',
-        body: JSON.stringify({
-          jobs: visibleJobs,
-          pagination: {
-            offset,
-            limit,
-            total,
-            has_more: offset + visibleJobs.length < total
-          }
-        })
+        body: JSON.stringify(response)
       })
     }
 

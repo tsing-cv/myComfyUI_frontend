@@ -1,0 +1,1 @@
+{"version":3,"file":"remove-experimental-fetch-polyfill.d.ts","sourceRoot":"","sources":["../../../../../../packages/cypress/src/migrations/update-20-8-0/remove-experimental-fetch-polyfill.ts"],"names":[],"mappings":"AAAA,OAAO,EAAe,KAAK,IAAI,EAAE,MAAM,YAAY,CAAC;AAWpD,yBAA+B,IAAI,EAAE,IAAI,iBAiBxC"}

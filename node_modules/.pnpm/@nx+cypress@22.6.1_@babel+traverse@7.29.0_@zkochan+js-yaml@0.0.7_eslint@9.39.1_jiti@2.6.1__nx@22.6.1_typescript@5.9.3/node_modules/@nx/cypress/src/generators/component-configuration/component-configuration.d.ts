@@ -1,0 +1,7 @@
+import { GeneratorCallback, ProjectConfiguration, Tree } from '@nx/devkit';
+import { CypressComponentConfigurationSchema } from './schema';
+export declare function componentConfigurationGenerator(tree: Tree, options: CypressComponentConfigurationSchema): Promise<GeneratorCallback>;
+export declare function componentConfigurationGeneratorInternal(tree: Tree, options: CypressComponentConfigurationSchema): Promise<GeneratorCallback>;
+export declare function updateTsConfigForComponentTesting(tree: Tree, projectConfig: ProjectConfiguration): void;
+export default componentConfigurationGenerator;
+//# sourceMappingURL=component-configuration.d.ts.map

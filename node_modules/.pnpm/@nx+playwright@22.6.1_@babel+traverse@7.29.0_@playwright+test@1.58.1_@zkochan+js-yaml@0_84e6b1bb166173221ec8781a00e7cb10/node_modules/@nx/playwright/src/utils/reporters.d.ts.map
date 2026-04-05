@@ -1,0 +1,1 @@
+{"version":3,"file":"reporters.d.ts","sourceRoot":"","sources":["../../../../../packages/playwright/src/utils/reporters.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,oBAAoB,EAAE,MAAM,kBAAkB,CAAC;AAE7D,MAAM,MAAM,cAAc,GAAG,CAAC,QAAQ,EAAE,MAAM,EAAE,MAAM,CAAC,EAAE,MAAM,CAAC,CAAC;AAEjE,wBAAgB,kBAAkB,CAChC,gBAAgB,EAAE,oBAAoB,GACrC,KAAK,CAAC,cAAc,CAAC,CAuCvB"}

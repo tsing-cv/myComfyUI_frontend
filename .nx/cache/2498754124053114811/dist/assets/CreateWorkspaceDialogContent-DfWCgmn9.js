@@ -1,0 +1,114 @@
+import "./rolldown-runtime-DBfy44LZ.js";
+import { dt as useToast } from "./vendor-primevue-Dnp2bJ8y.js";
+import "./vendor-firebase-x5F51RZV.js";
+import { D as computed, F as createTextVNode, I as createVNode, O as createBaseVNode, R as defineComponent, Ut as toDisplayString, _ as vModelText, _t as withCtx, et as openBlock, j as createElementBlock, kt as ref, vt as withDirectives, y as withKeys } from "./vendor-vue-core-Ba0aGEmU.js";
+import "./vendor-other-BMn-xt1e.js";
+import "./useFeatureFlags-BHjH2vt1.js";
+import "./api-kFdESQTE.js";
+import "./toastStore-Cs9o1vxC.js";
+import "./vendor-markdown-Cwvpr7zF.js";
+import "./colorUtil-D_gLWYA0.js";
+import { n as useI18n } from "./vendor-i18n-CQIJzQYM.js";
+import "./i18n-CEjiKAGw.js";
+import "./vendor-reka-ui-D-_wwtHz.js";
+import { t as Button_default } from "./Button-BDFSC50t.js";
+import { Li as useTeamWorkspaceStore } from "./dialogService-ClaKHdWI.js";
+import "./formatUtil-CKufMkDg.js";
+import { t as useDialogStore } from "./dialogStore-BfuGFDEW.js";
+import "./userStore-DKB2Qhsc.js";
+import "./useErrorHandling-BWjixeIq.js";
+import "./downloadUtil-B-Ajm1fy.js";
+import "./useCopyToClipboard-BfoO2Yv1.js";
+import "./vendor-tiptap-Dk5jn8en.js";
+import "./WaveAudioPlayer-CHCY451S.js";
+import "./Popover-CIFEPFvK.js";
+import "./electronDownloadStore-CuawkY8S.js";
+import "./markdownRendererUtil-uFQ2wi0y.js";
+import "./useExternalLink-CjbQfKLB.js";
+//#region src/platform/workspace/components/dialogs/CreateWorkspaceDialogContent.vue?vue&type=script&setup=true&lang.ts
+var _hoisted_1 = { class: "flex w-full max-w-[400px] flex-col rounded-2xl border border-border-default bg-base-background" };
+var _hoisted_2 = { class: "flex h-12 items-center justify-between border-b border-border-default px-4" };
+var _hoisted_3 = { class: "m-0 text-sm font-normal text-base-foreground" };
+var _hoisted_4 = ["aria-label"];
+var _hoisted_5 = { class: "flex flex-col gap-4 p-4" };
+var _hoisted_6 = { class: "m-0 text-sm text-muted-foreground" };
+var _hoisted_7 = { class: "flex flex-col gap-2" };
+var _hoisted_8 = { class: "text-sm text-base-foreground" };
+var _hoisted_9 = ["placeholder"];
+var _hoisted_10 = { class: "flex items-center justify-end gap-4 p-4" };
+//#endregion
+//#region src/platform/workspace/components/dialogs/CreateWorkspaceDialogContent.vue
+var CreateWorkspaceDialogContent_default = /* @__PURE__ */ defineComponent({
+	__name: "CreateWorkspaceDialogContent",
+	props: { onConfirm: { type: Function } },
+	setup(__props) {
+		const { t } = useI18n();
+		const dialogStore = useDialogStore();
+		const toast = useToast();
+		const workspaceStore = useTeamWorkspaceStore();
+		const loading = ref(false);
+		const workspaceName = ref("");
+		const isValidName = computed(() => {
+			const name = workspaceName.value.trim();
+			return name.length >= 1 && name.length <= 50 && /^[a-zA-Z0-9][a-zA-Z0-9\s\-_'.,()&+]*$/.test(name);
+		});
+		function onCancel() {
+			dialogStore.closeDialog({ key: "create-workspace" });
+		}
+		async function onCreate() {
+			if (!isValidName.value) return;
+			loading.value = true;
+			try {
+				const name = workspaceName.value.trim();
+				await __props.onConfirm?.(name);
+				dialogStore.closeDialog({ key: "create-workspace" });
+				await workspaceStore.createWorkspace(name);
+			} catch (error) {
+				console.error("[CreateWorkspaceDialog] Failed to create workspace:", error);
+				toast.add({
+					severity: "error",
+					summary: t("workspacePanel.toast.failedToCreateWorkspace"),
+					detail: error instanceof Error ? error.message : t("g.unknownError")
+				});
+			} finally {
+				loading.value = false;
+			}
+		}
+		return (_ctx, _cache) => {
+			return openBlock(), createElementBlock("div", _hoisted_1, [
+				createBaseVNode("div", _hoisted_2, [createBaseVNode("h2", _hoisted_3, toDisplayString(_ctx.$t("workspacePanel.createWorkspaceDialog.title")), 1), createBaseVNode("button", {
+					class: "focus-visible:ring-secondary-foreground cursor-pointer rounded-sm border-none bg-transparent p-0 text-muted-foreground transition-colors hover:text-base-foreground focus-visible:ring-1 focus-visible:outline-none",
+					"aria-label": _ctx.$t("g.close"),
+					onClick: onCancel
+				}, _cache[2] || (_cache[2] = [createBaseVNode("i", { class: "pi pi-times size-4" }, null, -1)]), 8, _hoisted_4)]),
+				createBaseVNode("div", _hoisted_5, [createBaseVNode("p", _hoisted_6, toDisplayString(_ctx.$t("workspacePanel.createWorkspaceDialog.message")), 1), createBaseVNode("div", _hoisted_7, [createBaseVNode("label", _hoisted_8, toDisplayString(_ctx.$t("workspacePanel.createWorkspaceDialog.nameLabel")), 1), withDirectives(createBaseVNode("input", {
+					"onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => workspaceName.value = $event),
+					type: "text",
+					class: "focus:ring-secondary-foreground w-full rounded-lg border border-border-default bg-transparent px-3 py-2 text-sm text-base-foreground placeholder:text-muted-foreground focus:ring-1 focus:outline-none",
+					placeholder: _ctx.$t("workspacePanel.createWorkspaceDialog.namePlaceholder"),
+					onKeydown: _cache[1] || (_cache[1] = withKeys(($event) => isValidName.value && onCreate(), ["enter"]))
+				}, null, 40, _hoisted_9), [[vModelText, workspaceName.value]])])]),
+				createBaseVNode("div", _hoisted_10, [createVNode(Button_default, {
+					variant: "muted-textonly",
+					onClick: onCancel
+				}, {
+					default: withCtx(() => [createTextVNode(toDisplayString(_ctx.$t("g.cancel")), 1)]),
+					_: 1
+				}), createVNode(Button_default, {
+					variant: "primary",
+					size: "lg",
+					loading: loading.value,
+					disabled: !isValidName.value,
+					onClick: onCreate
+				}, {
+					default: withCtx(() => [createTextVNode(toDisplayString(_ctx.$t("workspacePanel.createWorkspaceDialog.create")), 1)]),
+					_: 1
+				}, 8, ["loading", "disabled"])])
+			]);
+		};
+	}
+});
+//#endregion
+export { CreateWorkspaceDialogContent_default as default };
+
+//# sourceMappingURL=CreateWorkspaceDialogContent-DfWCgmn9.js.map

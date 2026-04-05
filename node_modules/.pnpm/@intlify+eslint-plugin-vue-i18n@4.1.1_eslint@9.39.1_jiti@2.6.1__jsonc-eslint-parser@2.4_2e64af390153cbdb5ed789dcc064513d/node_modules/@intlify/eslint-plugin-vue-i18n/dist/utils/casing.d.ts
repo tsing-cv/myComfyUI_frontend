@@ -1,0 +1,10 @@
+export declare function isKebabCase(str: string): boolean;
+export declare function isSnakeCase(str: string): boolean;
+export declare function isCamelCase(str: string): boolean;
+export declare function isLowerCase(str: string): boolean;
+export declare function isPascalCase(str: string): boolean;
+export declare function isScreamingSnakeCase(str: string): boolean;
+export declare function camelCase(str: string): string;
+export declare function pascalCase(str: string): string;
+export declare const allowedCaseOptions: readonly ["camelCase", "kebab-case", "lowercase", "PascalCase", "snake_case", "SCREAMING_SNAKE_CASE"];
+export declare function getCasingChecker(name: (typeof allowedCaseOptions)[number]): (str: string) => boolean;

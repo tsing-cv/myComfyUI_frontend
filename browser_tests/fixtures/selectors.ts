@@ -1,3 +1,8 @@
+/**
+ * Centralized test selectors for browser tests.
+ * Use data-testid attributes for stable selectors.
+ */
+
 export const TestIds = {
   sidebar: {
     toolbar: 'side-toolbar',

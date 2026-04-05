@@ -1,0 +1,1 @@
+{"version":3,"file":"remove-tsconfig-and-copy-files-options-from-cypress-executor.d.ts","sourceRoot":"","sources":["../../../../../../packages/cypress/src/migrations/update-21-0-0/remove-tsconfig-and-copy-files-options-from-cypress-executor.ts"],"names":[],"mappings":"AAAA,OAAO,EAML,KAAK,IAAI,EAGV,MAAM,YAAY,CAAC;AAMpB,yBAA+B,IAAI,EAAE,IAAI,iBA8DxC"}

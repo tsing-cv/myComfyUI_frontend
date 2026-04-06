@@ -106,5 +106,59 @@
       ],
       "command": "pnpm exec nx watch --projects @comfyorg/desktop-ui --includeDependentProjects -- pnpm exec nx build-deps @comfyorg/desktop-ui"
     }
+  },
+  "6663400204853807001": {
+    "build-storybook": {
+      "command": "storybook build",
+      "options": {
+        "cwd": "apps/desktop-ui"
+      },
+      "cache": true,
+      "outputs": [
+        "{projectRoot}/storybook-static",
+        "{options.output-dir}",
+        "{options.outputDir}",
+        "{options.o}"
+      ],
+      "inputs": [
+        "default",
+        "^default",
+        {
+          "externalDependencies": [
+            "storybook"
+          ]
+        }
+      ]
+    },
+    "storybook": {
+      "continuous": true,
+      "command": "storybook dev",
+      "options": {
+        "cwd": "apps/desktop-ui"
+      }
+    },
+    "static-storybook": {
+      "dependsOn": [
+        "build-storybook"
+      ],
+      "continuous": true,
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "build-storybook",
+        "staticFilePath": "apps/desktop-ui/storybook-static"
+      }
+    },
+    "build-deps": {
+      "dependsOn": [
+        "^build"
+      ]
+    },
+    "watch-deps": {
+      "continuous": true,
+      "dependsOn": [
+        "build-deps"
+      ],
+      "command": "pnpm exec nx watch --projects @comfyorg/desktop-ui --includeDependentProjects -- pnpm exec nx build-deps @comfyorg/desktop-ui"
+    }
   }
 }

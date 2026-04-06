@@ -611,496 +611,6 @@
       "nx/core/package-json"
     ]
   },
-  "packages/ingest-types": {
-    "root": [
-      "packages/ingest-types/package.json",
-      "nx/core/package-json"
-    ],
-    "targets": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.cache": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.options": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.inputs": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.outputs": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.executor": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.options.cwd": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.options.command": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata.technologies": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata.technologies.0": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata.description": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata.help": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata.help.command": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata.help.example": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "name": [
-      "packages/ingest-types/package.json",
-      "nx/core/package-json"
-    ],
-    "tags": [
-      "packages/ingest-types/package.json",
-      "nx/core/package-json"
-    ],
-    "tags.npm:public": [
-      "packages/ingest-types/package.json",
-      "nx/core/package-json"
-    ],
-    "tags.scope:shared": [
-      "packages/ingest-types/package.json",
-      "nx/core/package-json"
-    ],
-    "tags.type:types": [
-      "packages/ingest-types/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.targetGroups": [
-      "packages/ingest-types/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.targetGroups.NPM Scripts": [
-      "packages/ingest-types/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.targetGroups.NPM Scripts.0": [
-      "packages/ingest-types/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.description": [
-      "packages/ingest-types/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.js": [
-      "packages/ingest-types/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.js.packageName": [
-      "packages/ingest-types/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.js.packageVersion": [
-      "packages/ingest-types/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.js.packageExports": [
-      "packages/ingest-types/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.js.isInPackageManagerWorkspaces": [
-      "packages/ingest-types/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.generate": [
-      "packages/ingest-types/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.generate.executor": [
-      "packages/ingest-types/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.generate.options": [
-      "packages/ingest-types/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.generate.metadata": [
-      "packages/ingest-types/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.generate.options.script": [
-      "packages/ingest-types/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.generate.metadata.scriptContent": [
-      "packages/ingest-types/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.generate.metadata.runCommand": [
-      "packages/ingest-types/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.nx-release-publish": [
-      "packages/ingest-types/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.nx-release-publish.executor": [
-      "packages/ingest-types/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.nx-release-publish.dependsOn": [
-      "packages/ingest-types/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.nx-release-publish.options": [
-      "packages/ingest-types/package.json",
-      "nx/core/package-json"
-    ]
-  },
-  "packages/shared-frontend-utils": {
-    "root": [
-      "packages/shared-frontend-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "targets": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.cache": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.options": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.inputs": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.outputs": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.executor": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.options.cwd": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.options.command": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata.technologies": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata.technologies.0": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata.description": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata.help": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata.help.command": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata.help.example": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "name": [
-      "packages/shared-frontend-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "tags": [
-      "packages/shared-frontend-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "tags.npm:private": [
-      "packages/shared-frontend-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.targetGroups": [
-      "packages/shared-frontend-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.targetGroups.NPM Scripts": [
-      "packages/shared-frontend-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.targetGroups.NPM Scripts.0": [
-      "packages/shared-frontend-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.description": [
-      "packages/shared-frontend-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.js": [
-      "packages/shared-frontend-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.js.packageName": [
-      "packages/shared-frontend-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.js.packageVersion": [
-      "packages/shared-frontend-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.js.packageExports": [
-      "packages/shared-frontend-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.js.isInPackageManagerWorkspaces": [
-      "packages/shared-frontend-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.typecheck": [
-      "packages/shared-frontend-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.typecheck.executor": [
-      "packages/shared-frontend-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.typecheck.options": [
-      "packages/shared-frontend-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.typecheck.metadata": [
-      "packages/shared-frontend-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.typecheck.options.script": [
-      "packages/shared-frontend-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.typecheck.metadata.scriptContent": [
-      "packages/shared-frontend-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.typecheck.metadata.runCommand": [
-      "packages/shared-frontend-utils/package.json",
-      "nx/core/package-json"
-    ]
-  },
-  "packages/tailwind-utils": {
-    "root": [
-      "packages/tailwind-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "targets": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.cache": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.options": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.inputs": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.outputs": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.executor": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.options.cwd": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.options.command": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata.technologies": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata.technologies.0": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata.description": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata.help": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata.help.command": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata.help.example": [
-      "eslint.config.ts",
-      "@nx/eslint/plugin"
-    ],
-    "name": [
-      "packages/tailwind-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "tags": [
-      "packages/tailwind-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "tags.npm:public": [
-      "packages/tailwind-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "tags.scope:shared": [
-      "packages/tailwind-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "tags.type:util": [
-      "packages/tailwind-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.targetGroups": [
-      "packages/tailwind-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.targetGroups.NPM Scripts": [
-      "packages/tailwind-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.targetGroups.NPM Scripts.0": [
-      "packages/tailwind-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.description": [
-      "packages/tailwind-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.js": [
-      "packages/tailwind-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.js.packageName": [
-      "packages/tailwind-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.js.packageVersion": [
-      "packages/tailwind-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.js.packageExports": [
-      "packages/tailwind-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.js.packageMain": [
-      "packages/tailwind-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.js.isInPackageManagerWorkspaces": [
-      "packages/tailwind-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.typecheck": [
-      "packages/tailwind-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.typecheck.executor": [
-      "packages/tailwind-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.typecheck.options": [
-      "packages/tailwind-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.typecheck.metadata": [
-      "packages/tailwind-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.typecheck.options.script": [
-      "packages/tailwind-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.typecheck.metadata.scriptContent": [
-      "packages/tailwind-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.typecheck.metadata.runCommand": [
-      "packages/tailwind-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.nx-release-publish": [
-      "packages/tailwind-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.nx-release-publish.executor": [
-      "packages/tailwind-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.nx-release-publish.dependsOn": [
-      "packages/tailwind-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.nx-release-publish.options": [
-      "packages/tailwind-utils/package.json",
-      "nx/core/package-json"
-    ]
-  },
   ".": {
     "root": [
       "playwright.config.ts",
@@ -11773,6 +11283,496 @@
     "targets.e2e-ci--merge-reports.metadata.description": [
       "playwright.config.ts",
       "@nx/playwright/plugin"
+    ]
+  },
+  "packages/ingest-types": {
+    "root": [
+      "packages/ingest-types/package.json",
+      "nx/core/package-json"
+    ],
+    "targets": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.cache": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.options": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.inputs": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.outputs": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.executor": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.options.cwd": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.options.command": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.technologies": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.technologies.0": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.description": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.help": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.help.command": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.help.example": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "name": [
+      "packages/ingest-types/package.json",
+      "nx/core/package-json"
+    ],
+    "tags": [
+      "packages/ingest-types/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:public": [
+      "packages/ingest-types/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.scope:shared": [
+      "packages/ingest-types/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.type:types": [
+      "packages/ingest-types/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups": [
+      "packages/ingest-types/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts": [
+      "packages/ingest-types/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.0": [
+      "packages/ingest-types/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.description": [
+      "packages/ingest-types/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "packages/ingest-types/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "packages/ingest-types/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageVersion": [
+      "packages/ingest-types/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageExports": [
+      "packages/ingest-types/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "packages/ingest-types/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.generate": [
+      "packages/ingest-types/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.generate.executor": [
+      "packages/ingest-types/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.generate.options": [
+      "packages/ingest-types/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.generate.metadata": [
+      "packages/ingest-types/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.generate.options.script": [
+      "packages/ingest-types/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.generate.metadata.scriptContent": [
+      "packages/ingest-types/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.generate.metadata.runCommand": [
+      "packages/ingest-types/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.nx-release-publish": [
+      "packages/ingest-types/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.nx-release-publish.executor": [
+      "packages/ingest-types/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.nx-release-publish.dependsOn": [
+      "packages/ingest-types/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.nx-release-publish.options": [
+      "packages/ingest-types/package.json",
+      "nx/core/package-json"
+    ]
+  },
+  "packages/shared-frontend-utils": {
+    "root": [
+      "packages/shared-frontend-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.cache": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.options": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.inputs": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.outputs": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.executor": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.options.cwd": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.options.command": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.technologies": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.technologies.0": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.description": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.help": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.help.command": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.help.example": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "name": [
+      "packages/shared-frontend-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "tags": [
+      "packages/shared-frontend-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:private": [
+      "packages/shared-frontend-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups": [
+      "packages/shared-frontend-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts": [
+      "packages/shared-frontend-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.0": [
+      "packages/shared-frontend-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.description": [
+      "packages/shared-frontend-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "packages/shared-frontend-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "packages/shared-frontend-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageVersion": [
+      "packages/shared-frontend-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageExports": [
+      "packages/shared-frontend-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "packages/shared-frontend-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.typecheck": [
+      "packages/shared-frontend-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.typecheck.executor": [
+      "packages/shared-frontend-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.typecheck.options": [
+      "packages/shared-frontend-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.typecheck.metadata": [
+      "packages/shared-frontend-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.typecheck.options.script": [
+      "packages/shared-frontend-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.typecheck.metadata.scriptContent": [
+      "packages/shared-frontend-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.typecheck.metadata.runCommand": [
+      "packages/shared-frontend-utils/package.json",
+      "nx/core/package-json"
+    ]
+  },
+  "packages/tailwind-utils": {
+    "root": [
+      "packages/tailwind-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.cache": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.options": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.inputs": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.outputs": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.executor": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.options.cwd": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.options.command": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.technologies": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.technologies.0": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.description": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.help": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.help.command": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.help.example": [
+      "eslint.config.ts",
+      "@nx/eslint/plugin"
+    ],
+    "name": [
+      "packages/tailwind-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "tags": [
+      "packages/tailwind-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:public": [
+      "packages/tailwind-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.scope:shared": [
+      "packages/tailwind-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.type:util": [
+      "packages/tailwind-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups": [
+      "packages/tailwind-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts": [
+      "packages/tailwind-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.0": [
+      "packages/tailwind-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.description": [
+      "packages/tailwind-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "packages/tailwind-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "packages/tailwind-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageVersion": [
+      "packages/tailwind-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageExports": [
+      "packages/tailwind-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageMain": [
+      "packages/tailwind-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "packages/tailwind-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.typecheck": [
+      "packages/tailwind-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.typecheck.executor": [
+      "packages/tailwind-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.typecheck.options": [
+      "packages/tailwind-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.typecheck.metadata": [
+      "packages/tailwind-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.typecheck.options.script": [
+      "packages/tailwind-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.typecheck.metadata.scriptContent": [
+      "packages/tailwind-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.typecheck.metadata.runCommand": [
+      "packages/tailwind-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.nx-release-publish": [
+      "packages/tailwind-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.nx-release-publish.executor": [
+      "packages/tailwind-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.nx-release-publish.dependsOn": [
+      "packages/tailwind-utils/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.nx-release-publish.options": [
+      "packages/tailwind-utils/package.json",
+      "nx/core/package-json"
     ]
   },
   "packages/design-system": {

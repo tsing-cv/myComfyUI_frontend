@@ -4758,6 +4758,47 @@
             "executor": "nx:run-commands",
             "configurations": {}
           },
+          "e2e-ci--browser_tests/tests/subgraph/subgraphDraftPositions.spec.ts": {
+            "options": {
+              "cwd": ".",
+              "env": {
+                "PLAYWRIGHT_HTML_OUTPUT_DIR": "playwright-report/browser_tests-tests-subgraph-subgraphDraftPositions-spec-ts",
+                "PLAYWRIGHT_HTML_REPORT": "playwright-report/browser_tests-tests-subgraph-subgraphDraftPositions-spec-ts"
+              },
+              "command": "playwright test browser_tests/tests/subgraph/subgraphDraftPositions.spec.ts --output=test-results/browser_tests-tests-subgraph-subgraphDraftPositions-spec-ts"
+            },
+            "metadata": {
+              "technologies": [
+                "playwright"
+              ],
+              "description": "Runs Playwright Tests in browser_tests/tests/subgraph/subgraphDraftPositions.spec.ts in CI",
+              "help": {
+                "command": "pnpm exec playwright test --help",
+                "example": {
+                  "options": {
+                    "workers": 1
+                  }
+                }
+              }
+            },
+            "parallelism": false,
+            "cache": true,
+            "inputs": [
+              "default",
+              "^default",
+              {
+                "externalDependencies": [
+                  "@playwright/test"
+                ]
+              }
+            ],
+            "outputs": [
+              "{projectRoot}/test-results/browser_tests-tests-subgraph-subgraphDraftPositions-spec-ts",
+              "{projectRoot}/playwright-report/browser_tests-tests-subgraph-subgraphDraftPositions-spec-ts"
+            ],
+            "executor": "nx:run-commands",
+            "configurations": {}
+          },
           "e2e-ci--browser_tests/tests/subgraph/subgraphLifecycle.spec.ts": {
             "options": {
               "cwd": ".",
@@ -7255,6 +7296,12 @@
                 "options": "forward"
               },
               {
+                "target": "e2e-ci--browser_tests/tests/subgraph/subgraphDraftPositions.spec.ts",
+                "projects": "self",
+                "params": "forward",
+                "options": "forward"
+              },
+              {
                 "target": "e2e-ci--browser_tests/tests/subgraph/subgraphLifecycle.spec.ts",
                 "projects": "self",
                 "params": "forward",
@@ -7573,7 +7620,7 @@
             ],
             "options": {
               "config": "playwright.config.ts",
-              "expectedSuites": 139
+              "expectedSuites": 140
             },
             "metadata": {
               "technologies": [
@@ -7681,6 +7728,7 @@
               "e2e-ci--browser_tests/tests/sidebar/workflowSearch.spec.ts",
               "e2e-ci--browser_tests/tests/sidebar/workflows.spec.ts",
               "e2e-ci--browser_tests/tests/subgraph/subgraphCrud.spec.ts",
+              "e2e-ci--browser_tests/tests/subgraph/subgraphDraftPositions.spec.ts",
               "e2e-ci--browser_tests/tests/subgraph/subgraphLifecycle.spec.ts",
               "e2e-ci--browser_tests/tests/subgraph/subgraphNavigation.spec.ts",
               "e2e-ci--browser_tests/tests/subgraph/subgraphNested.spec.ts",
@@ -7972,6 +8020,15 @@
         "version": "3.3.0",
         "packageName": "@astrojs/prism",
         "hash": "sha512-q8VwfU/fDZNoDOf+r7jUnMC2//H2l0TuQ6FkGJL8vD8nw/q5KiL3DS1KKBI3QhI9UQhpJ5dc7AtqfbXWuOgLCQ=="
+      }
+    },
+    "npm:@astrojs/sitemap": {
+      "type": "npm",
+      "name": "npm:@astrojs/sitemap",
+      "data": {
+        "version": "3.7.1",
+        "packageName": "@astrojs/sitemap",
+        "hash": "sha512-IzQqdTeskaMX+QDZCzMuJIp8A8C1vgzMBp/NmHNnadepHYNHcxQdGLQZYfkbd2EbRXUfOS+UDIKx8sKg0oWVdw=="
       }
     },
     "npm:@astrojs/telemetry": {
@@ -13770,6 +13827,15 @@
         "hash": "sha512-WmdoynAX8Stew/36uTSVMcLJJ1KRh6L3IZRx1PZ7qJtBqT3dYTgyDTx8H1qoRghErydW7xw9mSJ3wS//tCRpFA=="
       }
     },
+    "npm:@types/sax": {
+      "type": "npm",
+      "name": "npm:@types/sax",
+      "data": {
+        "version": "1.2.7",
+        "packageName": "@types/sax",
+        "hash": "sha512-rO73L89PJxeYM3s3pPPjiPgVVcymqU490g0YO5n5By0k2Erzj6tay/4lr1CHAAU4JyOWd1rpQ8bCf6cZfHU96A=="
+      }
+    },
     "npm:@types/semver": {
       "type": "npm",
       "name": "npm:@types/semver",
@@ -15091,6 +15157,15 @@
         "version": "3.1.3",
         "packageName": "anymatch",
         "hash": "sha512-KMReFUr0B4t+D+OBkjR3KYqvocp2XaSzO55UcB6mgQMd3KbcE+mWTyvVV7D/zsdEbNnV6acZUutkiHQXvTr1Rw=="
+      }
+    },
+    "npm:arg": {
+      "type": "npm",
+      "name": "npm:arg",
+      "data": {
+        "version": "5.0.2",
+        "packageName": "arg",
+        "hash": "sha512-PYjyFOLKQ9y57JvQ6QLo8dAgNqswh8M1RMJYdQduT6xbWSgK36P/Z/v+p888pM69jMMfS8Xd8F6I1kQ/I9HUGg=="
       }
     },
     "npm:argparse@1.0.10": {
@@ -23436,6 +23511,15 @@
         "hash": "sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg=="
       }
     },
+    "npm:sitemap": {
+      "type": "npm",
+      "name": "npm:sitemap",
+      "data": {
+        "version": "9.0.1",
+        "packageName": "sitemap",
+        "hash": "sha512-S6hzjGJSG3d6if0YoF5kTyeRJvia6FSTBroE5fQ0bu1QNxyJqhhinfUsXi9fH3MgtXODWvwo2BDyQSnhPQ88uQ=="
+      }
+    },
     "npm:slash": {
       "type": "npm",
       "name": "npm:slash",
@@ -23623,6 +23707,15 @@
         "version": "10.2.10",
         "packageName": "storybook",
         "hash": "sha512-N4U42qKgzMHS7DjqLz5bY4P7rnvJtYkWFCyKspZr3FhPUuy6CWOae3aYC2BjXkHrdug0Jyta6VxFTuB1tYUKhg=="
+      }
+    },
+    "npm:stream-replace-string": {
+      "type": "npm",
+      "name": "npm:stream-replace-string",
+      "data": {
+        "version": "2.0.0",
+        "packageName": "stream-replace-string",
+        "hash": "sha512-TlnjJ1C0QrmxRNrON00JvaFFlNh5TTG00APw23j74ET7gkQpTASi6/L2fuiav8pzK715HXtUeClpBTw2NPSn6w=="
       }
     },
     "npm:string-argv": {
@@ -26028,6 +26121,11 @@
       },
       {
         "source": "@comfyorg/website",
+        "target": "npm:@astrojs/sitemap",
+        "type": "static"
+      },
+      {
+        "source": "@comfyorg/website",
         "target": "@comfyorg/design-system",
         "type": "static"
       },
@@ -26451,6 +26549,23 @@
       {
         "source": "npm:@astrojs/prism",
         "target": "npm:prismjs",
+        "type": "static"
+      }
+    ],
+    "npm:@astrojs/sitemap": [
+      {
+        "source": "npm:@astrojs/sitemap",
+        "target": "npm:sitemap",
+        "type": "static"
+      },
+      {
+        "source": "npm:@astrojs/sitemap",
+        "target": "npm:stream-replace-string",
+        "type": "static"
+      },
+      {
+        "source": "npm:@astrojs/sitemap",
+        "target": "npm:zod@4.3.6",
         "type": "static"
       }
     ],
@@ -33229,6 +33344,13 @@
       {
         "source": "npm:@types/react",
         "target": "npm:csstype",
+        "type": "static"
+      }
+    ],
+    "npm:@types/sax": [
+      {
+        "source": "npm:@types/sax",
+        "target": "npm:@types/node@25.0.3",
         "type": "static"
       }
     ],
@@ -46092,6 +46214,28 @@
         "type": "static"
       }
     ],
+    "npm:sitemap": [
+      {
+        "source": "npm:sitemap",
+        "target": "npm:@types/node",
+        "type": "static"
+      },
+      {
+        "source": "npm:sitemap",
+        "target": "npm:@types/sax",
+        "type": "static"
+      },
+      {
+        "source": "npm:sitemap",
+        "target": "npm:arg",
+        "type": "static"
+      },
+      {
+        "source": "npm:sitemap",
+        "target": "npm:sax",
+        "type": "static"
+      }
+    ],
     "npm:slice-ansi@4.0.0": [
       {
         "source": "npm:slice-ansi@4.0.0",
@@ -49269,5 +49413,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1775473576227
+  "computedAt": 1775574974355
 }

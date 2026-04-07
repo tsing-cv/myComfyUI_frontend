@@ -55,6 +55,569 @@
   "fileMap": {
     "nonProjectFiles": [],
     "projectFileMap": {
+      "@comfyorg/ingest-types": [
+        {
+          "file": "packages/ingest-types/.gitignore",
+          "hash": "2503726497279607463"
+        },
+        {
+          "file": "packages/ingest-types/openapi-ts.config.ts",
+          "hash": "10938332729030695002"
+        },
+        {
+          "file": "packages/ingest-types/package.json",
+          "hash": "13344767453568624111",
+          "deps": [
+            "npm:@hey-api/openapi-ts",
+            "npm:zod"
+          ]
+        },
+        {
+          "file": "packages/ingest-types/src/index.ts",
+          "hash": "11365959679696260584"
+        },
+        {
+          "file": "packages/ingest-types/src/types.gen.ts",
+          "hash": "15967420300452493236"
+        },
+        {
+          "file": "packages/ingest-types/src/zod.gen.ts",
+          "hash": "14172061334481991892"
+        },
+        {
+          "file": "packages/ingest-types/tsconfig.json",
+          "hash": "10024138369231482624"
+        }
+      ],
+      "@comfyorg/desktop-ui": [
+        {
+          "file": "apps/desktop-ui/.storybook/main.ts",
+          "hash": "11667216883933297871"
+        },
+        {
+          "file": "apps/desktop-ui/.storybook/preview.ts",
+          "hash": "2918295275751099406"
+        },
+        {
+          "file": "apps/desktop-ui/components.d.ts",
+          "hash": "5863147860270564535"
+        },
+        {
+          "file": "apps/desktop-ui/index.html",
+          "hash": "447705264632037939"
+        },
+        {
+          "file": "apps/desktop-ui/package.json",
+          "hash": "6294991117744253306",
+          "deps": [
+            "npm:@tailwindcss/vite",
+            "npm:@vitejs/plugin-vue",
+            "npm:dotenv",
+            "npm:unplugin-icons",
+            "npm:unplugin-vue-components",
+            "npm:vite",
+            "npm:vite-plugin-html",
+            "npm:vite-plugin-vue-devtools",
+            "npm:vue-tsc",
+            "npm:@comfyorg/comfyui-electron-types",
+            "@comfyorg/shared-frontend-utils",
+            "npm:@primevue/core",
+            "npm:@primevue/themes",
+            "npm:@vueuse/core",
+            "npm:pinia",
+            "npm:primeicons",
+            "npm:primevue",
+            "npm:vue",
+            "npm:vue-i18n",
+            "npm:vue-router"
+          ]
+        },
+        {
+          "file": "apps/desktop-ui/src/App.vue",
+          "hash": "15313125319171422141"
+        },
+        {
+          "file": "apps/desktop-ui/src/components/bottomPanel/tabs/terminal/BaseTerminal.vue",
+          "hash": "2156714032522164840"
+        },
+        {
+          "file": "apps/desktop-ui/src/components/common/LanguageSelector.vue",
+          "hash": "6339994612807487695"
+        },
+        {
+          "file": "apps/desktop-ui/src/components/common/RefreshButton.vue",
+          "hash": "5300771056480787171"
+        },
+        {
+          "file": "apps/desktop-ui/src/components/common/StartupDisplay.vue",
+          "hash": "6613899507506417780"
+        },
+        {
+          "file": "apps/desktop-ui/src/components/common/UrlInput.vue",
+          "hash": "5489071527865941730"
+        },
+        {
+          "file": "apps/desktop-ui/src/components/install/DesktopSettingsConfiguration.vue",
+          "hash": "6950774249673755326"
+        },
+        {
+          "file": "apps/desktop-ui/src/components/install/GpuPicker.stories.ts",
+          "hash": "5099610770830761375"
+        },
+        {
+          "file": "apps/desktop-ui/src/components/install/GpuPicker.vue",
+          "hash": "7982498086670973089"
+        },
+        {
+          "file": "apps/desktop-ui/src/components/install/HardwareOption.stories.ts",
+          "hash": "13232360462274147863"
+        },
+        {
+          "file": "apps/desktop-ui/src/components/install/HardwareOption.vue",
+          "hash": "11173586354050356532"
+        },
+        {
+          "file": "apps/desktop-ui/src/components/install/InstallFooter.vue",
+          "hash": "13425063352044590390"
+        },
+        {
+          "file": "apps/desktop-ui/src/components/install/InstallLocationPicker.stories.ts",
+          "hash": "17643291949510645332"
+        },
+        {
+          "file": "apps/desktop-ui/src/components/install/InstallLocationPicker.vue",
+          "hash": "860250354085098185"
+        },
+        {
+          "file": "apps/desktop-ui/src/components/install/MigrationPicker.stories.ts",
+          "hash": "4847562240921103194"
+        },
+        {
+          "file": "apps/desktop-ui/src/components/install/MigrationPicker.vue",
+          "hash": "4696366302387119996"
+        },
+        {
+          "file": "apps/desktop-ui/src/components/install/mirror/MirrorItem.vue",
+          "hash": "14083561835657551976"
+        },
+        {
+          "file": "apps/desktop-ui/src/components/maintenance/StatusTag.vue",
+          "hash": "16646614912422032482"
+        },
+        {
+          "file": "apps/desktop-ui/src/components/maintenance/TaskCard.vue",
+          "hash": "15906386119733805680"
+        },
+        {
+          "file": "apps/desktop-ui/src/components/maintenance/TaskListItem.vue",
+          "hash": "664297759459588801"
+        },
+        {
+          "file": "apps/desktop-ui/src/components/maintenance/TaskListPanel.vue",
+          "hash": "9166135965686468633"
+        },
+        {
+          "file": "apps/desktop-ui/src/components/maintenance/TaskListStatusIcon.vue",
+          "hash": "12812333377020349527"
+        },
+        {
+          "file": "apps/desktop-ui/src/components/maintenance/TerminalOutputDrawer.vue",
+          "hash": "11990753862748071467"
+        },
+        {
+          "file": "apps/desktop-ui/src/composables/bottomPanelTabs/useTerminal.ts",
+          "hash": "3866363396833649521"
+        },
+        {
+          "file": "apps/desktop-ui/src/composables/bottomPanelTabs/useTerminalBuffer.ts",
+          "hash": "15007241272904968214"
+        },
+        {
+          "file": "apps/desktop-ui/src/constants/desktopDialogs.ts",
+          "hash": "1503669697939940754"
+        },
+        {
+          "file": "apps/desktop-ui/src/constants/desktopMaintenanceTasks.ts",
+          "hash": "11488461812222847325"
+        },
+        {
+          "file": "apps/desktop-ui/src/constants/uvMirrors.ts",
+          "hash": "10492037419005389069"
+        },
+        {
+          "file": "apps/desktop-ui/src/i18n.ts",
+          "hash": "4763860765260309258"
+        },
+        {
+          "file": "apps/desktop-ui/src/main.ts",
+          "hash": "15757938088796392975"
+        },
+        {
+          "file": "apps/desktop-ui/src/router.ts",
+          "hash": "8124914338581258777"
+        },
+        {
+          "file": "apps/desktop-ui/src/stores/maintenanceTaskStore.ts",
+          "hash": "6220641646562639012"
+        },
+        {
+          "file": "apps/desktop-ui/src/types/desktop/index.d.ts",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/desktop-ui/src/types/desktop/maintenanceTypes.ts",
+          "hash": "12768145698308844758"
+        },
+        {
+          "file": "apps/desktop-ui/src/types/global.d.ts",
+          "hash": "14408774019938894292"
+        },
+        {
+          "file": "apps/desktop-ui/src/types/primeVueTypes.ts",
+          "hash": "12734798163506737093"
+        },
+        {
+          "file": "apps/desktop-ui/src/utils/electronMirrorCheck.ts",
+          "hash": "17635597101245388740"
+        },
+        {
+          "file": "apps/desktop-ui/src/utils/envUtil.ts",
+          "hash": "10229510362439300547"
+        },
+        {
+          "file": "apps/desktop-ui/src/utils/refUtil.ts",
+          "hash": "16879854420473998632"
+        },
+        {
+          "file": "apps/desktop-ui/src/utils/tailwindUtil.ts",
+          "hash": "7680272001200958825"
+        },
+        {
+          "file": "apps/desktop-ui/src/utils/validationUtil.ts",
+          "hash": "12189278036130599680"
+        },
+        {
+          "file": "apps/desktop-ui/src/views/DesktopDialogView.vue",
+          "hash": "15919046656271727151"
+        },
+        {
+          "file": "apps/desktop-ui/src/views/DesktopStartView.vue",
+          "hash": "11320718888577794213"
+        },
+        {
+          "file": "apps/desktop-ui/src/views/DesktopUpdateView.vue",
+          "hash": "818913185865554788"
+        },
+        {
+          "file": "apps/desktop-ui/src/views/DownloadGitView.vue",
+          "hash": "6243052052359266143"
+        },
+        {
+          "file": "apps/desktop-ui/src/views/InstallView.stories.ts",
+          "hash": "3592363160454333192"
+        },
+        {
+          "file": "apps/desktop-ui/src/views/InstallView.vue",
+          "hash": "16938378394036614575"
+        },
+        {
+          "file": "apps/desktop-ui/src/views/MaintenanceView.stories.ts",
+          "hash": "8917853251408091980"
+        },
+        {
+          "file": "apps/desktop-ui/src/views/MaintenanceView.vue",
+          "hash": "5594245183073566869"
+        },
+        {
+          "file": "apps/desktop-ui/src/views/ManualConfigurationView.vue",
+          "hash": "14677957633081587400"
+        },
+        {
+          "file": "apps/desktop-ui/src/views/MetricsConsentView.vue",
+          "hash": "15680028190662910935"
+        },
+        {
+          "file": "apps/desktop-ui/src/views/NotSupportedView.vue",
+          "hash": "11556146905305055084"
+        },
+        {
+          "file": "apps/desktop-ui/src/views/ServerStartView.vue",
+          "hash": "12340967311219444773"
+        },
+        {
+          "file": "apps/desktop-ui/src/views/WelcomeView.vue",
+          "hash": "1431719777957907640"
+        },
+        {
+          "file": "apps/desktop-ui/src/views/layouts/LayoutDefault.vue",
+          "hash": "16297362740357998730"
+        },
+        {
+          "file": "apps/desktop-ui/src/views/templates/BaseViewTemplate.vue",
+          "hash": "17576926767488136495"
+        },
+        {
+          "file": "apps/desktop-ui/tsconfig.json",
+          "hash": "9432173101889909877"
+        },
+        {
+          "file": "apps/desktop-ui/vite.config.mts",
+          "hash": "3264715239357970616"
+        }
+      ],
+      "@comfyorg/registry-types": [
+        {
+          "file": "packages/registry-types/package.json",
+          "hash": "15990484525061206373"
+        },
+        {
+          "file": "packages/registry-types/src/comfyRegistryTypes.ts",
+          "hash": "6046970705788808038"
+        },
+        {
+          "file": "packages/registry-types/tsconfig.json",
+          "hash": "17840139469220099341"
+        }
+      ],
+      "@comfyorg/tailwind-utils": [
+        {
+          "file": "packages/tailwind-utils/README.md",
+          "hash": "9368885375741979863"
+        },
+        {
+          "file": "packages/tailwind-utils/package.json",
+          "hash": "1548744496161480788",
+          "deps": [
+            "npm:typescript",
+            "npm:clsx",
+            "npm:tailwind-merge"
+          ]
+        },
+        {
+          "file": "packages/tailwind-utils/src/index.ts",
+          "hash": "4292131799019631729"
+        },
+        {
+          "file": "packages/tailwind-utils/tsconfig.json",
+          "hash": "17840139469220099341"
+        }
+      ],
+      "@comfyorg/website": [
+        {
+          "file": "apps/website/.gitignore",
+          "hash": "7486132871676406140"
+        },
+        {
+          "file": "apps/website/astro.config.ts",
+          "hash": "15141145603597116378"
+        },
+        {
+          "file": "apps/website/package.json",
+          "hash": "362562067618440634",
+          "deps": [
+            "npm:@astrojs/vue",
+            "npm:@tailwindcss/vite",
+            "npm:astro",
+            "npm:tailwindcss",
+            "npm:typescript",
+            "npm:@astrojs/sitemap",
+            "@comfyorg/design-system",
+            "npm:@vercel/analytics",
+            "npm:vue"
+          ]
+        },
+        {
+          "file": "apps/website/public/fonts/inter-latin-italic.woff2",
+          "hash": "15182395218637858907"
+        },
+        {
+          "file": "apps/website/public/fonts/inter-latin-normal.woff2",
+          "hash": "5297257334638547312"
+        },
+        {
+          "file": "apps/website/public/icons/social/discord.svg",
+          "hash": "1356560750489717362"
+        },
+        {
+          "file": "apps/website/public/icons/social/github.svg",
+          "hash": "5577573742912026462"
+        },
+        {
+          "file": "apps/website/public/icons/social/instagram.svg",
+          "hash": "2816002780163128951"
+        },
+        {
+          "file": "apps/website/public/icons/social/linkedin.svg",
+          "hash": "6278189176332407626"
+        },
+        {
+          "file": "apps/website/public/icons/social/reddit.svg",
+          "hash": "15788246685007975408"
+        },
+        {
+          "file": "apps/website/public/icons/social/x.svg",
+          "hash": "6438516373614685892"
+        },
+        {
+          "file": "apps/website/public/robots.txt",
+          "hash": "4925066772727100050"
+        },
+        {
+          "file": "apps/website/src/components/AcademySection.vue",
+          "hash": "11109551647672262763"
+        },
+        {
+          "file": "apps/website/src/components/CTASection.vue",
+          "hash": "4518911275111586810"
+        },
+        {
+          "file": "apps/website/src/components/CaseStudySpotlight.vue",
+          "hash": "13726103751415358074"
+        },
+        {
+          "file": "apps/website/src/components/GetStartedSection.vue",
+          "hash": "3016403179207947528"
+        },
+        {
+          "file": "apps/website/src/components/HeroSection.vue",
+          "hash": "17272837492439692"
+        },
+        {
+          "file": "apps/website/src/components/ManifestoSection.vue",
+          "hash": "2228475472171889613"
+        },
+        {
+          "file": "apps/website/src/components/ProductShowcase.vue",
+          "hash": "974655899625141763"
+        },
+        {
+          "file": "apps/website/src/components/SiteFooter.vue",
+          "hash": "13102636777324214881"
+        },
+        {
+          "file": "apps/website/src/components/SiteNav.vue",
+          "hash": "13110367483618077351"
+        },
+        {
+          "file": "apps/website/src/components/SocialProofBar.vue",
+          "hash": "13024459389894335867"
+        },
+        {
+          "file": "apps/website/src/components/TestimonialsSection.vue",
+          "hash": "13934945690398302375"
+        },
+        {
+          "file": "apps/website/src/components/UseCaseSection.vue",
+          "hash": "4075928272854169733"
+        },
+        {
+          "file": "apps/website/src/components/ValuePillars.vue",
+          "hash": "3647966655077524230"
+        },
+        {
+          "file": "apps/website/src/env.d.ts",
+          "hash": "12247281929465002553"
+        },
+        {
+          "file": "apps/website/src/layouts/BaseLayout.astro",
+          "hash": "12487476131578260765"
+        },
+        {
+          "file": "apps/website/src/pages/about.astro",
+          "hash": "15077755355138437242"
+        },
+        {
+          "file": "apps/website/src/pages/careers.astro",
+          "hash": "18270800253536095880"
+        },
+        {
+          "file": "apps/website/src/pages/download.astro",
+          "hash": "1944630155496834215"
+        },
+        {
+          "file": "apps/website/src/pages/gallery.astro",
+          "hash": "8888871986367717511"
+        },
+        {
+          "file": "apps/website/src/pages/index.astro",
+          "hash": "10880915943998508292"
+        },
+        {
+          "file": "apps/website/src/pages/privacy-policy.astro",
+          "hash": "3026690571392142480"
+        },
+        {
+          "file": "apps/website/src/pages/terms-of-service.astro",
+          "hash": "4317584779630299568"
+        },
+        {
+          "file": "apps/website/src/pages/zh-CN/about.astro",
+          "hash": "11753994661651048728"
+        },
+        {
+          "file": "apps/website/src/pages/zh-CN/careers.astro",
+          "hash": "8738333685774535710"
+        },
+        {
+          "file": "apps/website/src/pages/zh-CN/download.astro",
+          "hash": "12420679732699925731"
+        },
+        {
+          "file": "apps/website/src/pages/zh-CN/gallery.astro",
+          "hash": "13874363189945131016"
+        },
+        {
+          "file": "apps/website/src/pages/zh-CN/index.astro",
+          "hash": "12979658008561550809"
+        },
+        {
+          "file": "apps/website/src/pages/zh-CN/privacy-policy.astro",
+          "hash": "11884101831996057052"
+        },
+        {
+          "file": "apps/website/src/pages/zh-CN/terms-of-service.astro",
+          "hash": "3198149173169450070"
+        },
+        {
+          "file": "apps/website/src/styles/global.css",
+          "hash": "6856182582919917027"
+        },
+        {
+          "file": "apps/website/tsconfig.json",
+          "hash": "2300212129000314804"
+        },
+        {
+          "file": "apps/website/vercel.json",
+          "hash": "9237452392550533834"
+        }
+      ],
+      "@comfyorg/shared-frontend-utils": [
+        {
+          "file": "packages/shared-frontend-utils/package.json",
+          "hash": "16459321605334010528",
+          "deps": [
+            "npm:typescript",
+            "npm:axios",
+            "npm:dompurify"
+          ]
+        },
+        {
+          "file": "packages/shared-frontend-utils/src/formatUtil.test.ts",
+          "hash": "13793894811089174249"
+        },
+        {
+          "file": "packages/shared-frontend-utils/src/formatUtil.ts",
+          "hash": "13973101353112924262"
+        },
+        {
+          "file": "packages/shared-frontend-utils/src/networkUtil.ts",
+          "hash": "524953626357200286"
+        },
+        {
+          "file": "packages/shared-frontend-utils/tsconfig.json",
+          "hash": "17840139469220099341"
+        }
+      ],
       "@comfyorg/comfyui-frontend": [
         {
           "file": ".gitignore",
@@ -110,7 +673,7 @@
         },
         {
           "file": "browser_tests/fixtures/ComfyPage.ts",
-          "hash": "1984881709840186476"
+          "hash": "17034477349936540756"
         },
         {
           "file": "browser_tests/fixtures/UserSelectPage.ts",
@@ -130,15 +693,23 @@
         },
         {
           "file": "browser_tests/fixtures/components/ComfyNodeSearchBox.ts",
-          "hash": "13378222913116810277"
+          "hash": "9071639655484797685"
         },
         {
           "file": "browser_tests/fixtures/components/ComfyNodeSearchBoxV2.ts",
           "hash": "8979344025972427709"
         },
         {
+          "file": "browser_tests/fixtures/components/ConfirmDialog.ts",
+          "hash": "16430435294355974509"
+        },
+        {
           "file": "browser_tests/fixtures/components/ContextMenu.ts",
           "hash": "14755967084003569312"
+        },
+        {
+          "file": "browser_tests/fixtures/components/MediaLightbox.ts",
+          "hash": "11574009405476323159"
         },
         {
           "file": "browser_tests/fixtures/components/QueuePanel.ts",
@@ -155,6 +726,10 @@
         {
           "file": "browser_tests/fixtures/components/SignInDialog.ts",
           "hash": "196568429774036711"
+        },
+        {
+          "file": "browser_tests/fixtures/components/TemplatesDialog.ts",
+          "hash": "6925368024394010313"
         },
         {
           "file": "browser_tests/fixtures/components/Topbar.ts",
@@ -182,11 +757,11 @@
         },
         {
           "file": "browser_tests/fixtures/helpers/AppModeHelper.ts",
-          "hash": "632590108578465366"
+          "hash": "15346323720411286330"
         },
         {
           "file": "browser_tests/fixtures/helpers/AssetsHelper.ts",
-          "hash": "1140518867717643580"
+          "hash": "8405684979134567840"
         },
         {
           "file": "browser_tests/fixtures/helpers/BuilderFooterHelper.ts",
@@ -246,7 +821,7 @@
         },
         {
           "file": "browser_tests/fixtures/helpers/SubgraphHelper.ts",
-          "hash": "8978246652603663700"
+          "hash": "9326699165796206585"
         },
         {
           "file": "browser_tests/fixtures/helpers/ToastHelper.ts",
@@ -254,7 +829,7 @@
         },
         {
           "file": "browser_tests/fixtures/helpers/WorkflowHelper.ts",
-          "hash": "3124386281672085592"
+          "hash": "694973700282743708"
         },
         {
           "file": "browser_tests/fixtures/helpers/mimeTypeUtil.ts",
@@ -338,7 +913,7 @@
         },
         {
           "file": "browser_tests/tests/appModeDropdownClipping.spec.ts",
-          "hash": "6365190388999699978"
+          "hash": "15978910678708415298"
         },
         {
           "file": "browser_tests/tests/appModeWidgetRename.spec.ts",
@@ -430,7 +1005,7 @@
         },
         {
           "file": "browser_tests/tests/confirmDialogTextWrap.spec.ts",
-          "hash": "3525609579924015290"
+          "hash": "17860973239398195577"
         },
         {
           "file": "browser_tests/tests/containAudit.spec.ts",
@@ -1286,7 +1861,7 @@
         },
         {
           "file": "browser_tests/tests/resultGallery.spec.ts",
-          "hash": "387939974842525369"
+          "hash": "9684160897484340410"
         },
         {
           "file": "browser_tests/tests/rightClickMenu.spec.ts",
@@ -1406,7 +1981,7 @@
         },
         {
           "file": "browser_tests/tests/sidebar/assets.spec.ts",
-          "hash": "9867671361717753421"
+          "hash": "12536139726344357799"
         },
         {
           "file": "browser_tests/tests/sidebar/modelLibrary.spec.ts",
@@ -1435,6 +2010,10 @@
         {
           "file": "browser_tests/tests/subgraph/subgraphCrud.spec.ts",
           "hash": "15028707590277215376"
+        },
+        {
+          "file": "browser_tests/tests/subgraph/subgraphDraftPositions.spec.ts",
+          "hash": "4519314225068812986"
         },
         {
           "file": "browser_tests/tests/subgraph/subgraphLifecycle.spec.ts",
@@ -1482,7 +2061,7 @@
         },
         {
           "file": "browser_tests/tests/templates.spec.ts",
-          "hash": "5247643648195114925"
+          "hash": "1735178260368630354"
         },
         {
           "file": "browser_tests/tests/templates.spec.ts-snapshots/template-card-after-hover-chromium-linux.png",
@@ -1830,7 +2409,7 @@
         },
         {
           "file": "browser_tests/tests/workflowPersistence.spec.ts",
-          "hash": "3200822499029820366"
+          "hash": "1717634917392665061"
         },
         {
           "file": "browser_tests/tests/workflowTabThumbnail.spec.ts",
@@ -1990,7 +2569,7 @@
         },
         {
           "file": "docs/guidance/playwright.md",
-          "hash": "1387048691572748054"
+          "hash": "13720869610700330391"
         },
         {
           "file": "docs/guidance/storybook.md",
@@ -2066,7 +2645,7 @@
         },
         {
           "file": "package.json",
-          "hash": "16765842686102346658"
+          "hash": "2446686658224013419"
         },
         {
           "file": "playwright.config.ts",
@@ -2078,11 +2657,11 @@
         },
         {
           "file": "pnpm-lock.yaml",
-          "hash": "14784475746243638608"
+          "hash": "15587917975114734228"
         },
         {
           "file": "pnpm-workspace.yaml",
-          "hash": "17951232470095441385"
+          "hash": "5945321069359312489"
         },
         {
           "file": "public/cursor/colorSelect.png",
@@ -5602,7 +6181,7 @@
         },
         {
           "file": "src/locales/ar/nodeDefs.json",
-          "hash": "14981741900551144432"
+          "hash": "3777784163366944484"
         },
         {
           "file": "src/locales/ar/settings.json",
@@ -5618,7 +6197,7 @@
         },
         {
           "file": "src/locales/en/nodeDefs.json",
-          "hash": "2236915939122481576"
+          "hash": "10075417079172458944"
         },
         {
           "file": "src/locales/en/settings.json",
@@ -5650,7 +6229,7 @@
         },
         {
           "file": "src/locales/fa/nodeDefs.json",
-          "hash": "12524596871771579311"
+          "hash": "17621872950290730422"
         },
         {
           "file": "src/locales/fa/settings.json",
@@ -5666,7 +6245,7 @@
         },
         {
           "file": "src/locales/fr/nodeDefs.json",
-          "hash": "14168900320538503569"
+          "hash": "6013713023609309859"
         },
         {
           "file": "src/locales/fr/settings.json",
@@ -5746,7 +6325,7 @@
         },
         {
           "file": "src/locales/tr/nodeDefs.json",
-          "hash": "1940247714214989993"
+          "hash": "15878856794641104800"
         },
         {
           "file": "src/locales/tr/settings.json",
@@ -5762,7 +6341,7 @@
         },
         {
           "file": "src/locales/zh-TW/nodeDefs.json",
-          "hash": "3678889047381516942"
+          "hash": "2850400213802236340"
         },
         {
           "file": "src/locales/zh-TW/settings.json",
@@ -5774,11 +6353,11 @@
         },
         {
           "file": "src/locales/zh/main.json",
-          "hash": "3082487536569158189"
+          "hash": "15271111140500244840"
         },
         {
           "file": "src/locales/zh/nodeDefs.json",
-          "hash": "305830094683881611"
+          "hash": "13701164790844671845"
         },
         {
           "file": "src/locales/zh/settings.json",
@@ -7146,7 +7725,7 @@
         },
         {
           "file": "src/platform/workspace/stores/workspaceAuthStore.ts",
-          "hash": "11816217627691168635"
+          "hash": "8175317277922852485"
         },
         {
           "file": "src/platform/workspace/workspaceConstants.ts",
@@ -7746,11 +8325,11 @@
         },
         {
           "file": "src/renderer/extensions/vueNodes/composables/useVueNodeResizeTracking.test.ts",
-          "hash": "6586261915843423895"
+          "hash": "11641329562190586357"
         },
         {
           "file": "src/renderer/extensions/vueNodes/composables/useVueNodeResizeTracking.ts",
-          "hash": "8290294780033420851"
+          "hash": "2493730636855135903"
         },
         {
           "file": "src/renderer/extensions/vueNodes/execution/useNodeExecutionState.ts",
@@ -8601,6 +9180,10 @@
           "hash": "15130672822322051041"
         },
         {
+          "file": "src/stores/__tests__/authTokenPriority.test.ts",
+          "hash": "11391459771187231359"
+        },
+        {
           "file": "src/stores/aboutPanelStore.ts",
           "hash": "8157765735343854738"
         },
@@ -8646,7 +9229,7 @@
         },
         {
           "file": "src/stores/authStore.ts",
-          "hash": "14396812050093129837"
+          "hash": "601677327060464152"
         },
         {
           "file": "src/stores/bootstrapStore.test.ts",
@@ -8663,6 +9246,10 @@
         {
           "file": "src/stores/comfyRegistryStore.ts",
           "hash": "16307420587620121465"
+        },
+        {
+          "file": "src/stores/commandStore.test.ts",
+          "hash": "11348291554747966337"
         },
         {
           "file": "src/stores/commandStore.ts",
@@ -8703,6 +9290,10 @@
         {
           "file": "src/stores/executionStore.ts",
           "hash": "12116660834181559114"
+        },
+        {
+          "file": "src/stores/extensionStore.test.ts",
+          "hash": "5854666483664562280"
         },
         {
           "file": "src/stores/extensionStore.ts",
@@ -8855,6 +9446,10 @@
         {
           "file": "src/stores/userStore.ts",
           "hash": "17575096544024303414"
+        },
+        {
+          "file": "src/stores/widgetStore.test.ts",
+          "hash": "14313833447900940066"
         },
         {
           "file": "src/stores/widgetStore.ts",
@@ -9805,202 +10400,6 @@
           "hash": "13699072341054105552"
         }
       ],
-      "@comfyorg/shared-frontend-utils": [
-        {
-          "file": "packages/shared-frontend-utils/package.json",
-          "hash": "16459321605334010528",
-          "deps": [
-            "npm:typescript",
-            "npm:axios",
-            "npm:dompurify"
-          ]
-        },
-        {
-          "file": "packages/shared-frontend-utils/src/formatUtil.test.ts",
-          "hash": "13793894811089174249"
-        },
-        {
-          "file": "packages/shared-frontend-utils/src/formatUtil.ts",
-          "hash": "13973101353112924262"
-        },
-        {
-          "file": "packages/shared-frontend-utils/src/networkUtil.ts",
-          "hash": "524953626357200286"
-        },
-        {
-          "file": "packages/shared-frontend-utils/tsconfig.json",
-          "hash": "17840139469220099341"
-        }
-      ],
-      "@comfyorg/tailwind-utils": [
-        {
-          "file": "packages/tailwind-utils/README.md",
-          "hash": "9368885375741979863"
-        },
-        {
-          "file": "packages/tailwind-utils/package.json",
-          "hash": "1548744496161480788",
-          "deps": [
-            "npm:typescript",
-            "npm:clsx",
-            "npm:tailwind-merge"
-          ]
-        },
-        {
-          "file": "packages/tailwind-utils/src/index.ts",
-          "hash": "4292131799019631729"
-        },
-        {
-          "file": "packages/tailwind-utils/tsconfig.json",
-          "hash": "17840139469220099341"
-        }
-      ],
-      "@comfyorg/website": [
-        {
-          "file": "apps/website/.gitignore",
-          "hash": "7486132871676406140"
-        },
-        {
-          "file": "apps/website/astro.config.ts",
-          "hash": "16026744896416913231"
-        },
-        {
-          "file": "apps/website/package.json",
-          "hash": "8866160307264713200",
-          "deps": [
-            "npm:@astrojs/vue",
-            "npm:@tailwindcss/vite",
-            "npm:astro",
-            "npm:tailwindcss",
-            "npm:typescript",
-            "@comfyorg/design-system",
-            "npm:@vercel/analytics",
-            "npm:vue"
-          ]
-        },
-        {
-          "file": "apps/website/public/fonts/inter-latin-italic.woff2",
-          "hash": "15182395218637858907"
-        },
-        {
-          "file": "apps/website/public/fonts/inter-latin-normal.woff2",
-          "hash": "5297257334638547312"
-        },
-        {
-          "file": "apps/website/public/icons/social/discord.svg",
-          "hash": "1356560750489717362"
-        },
-        {
-          "file": "apps/website/public/icons/social/github.svg",
-          "hash": "5577573742912026462"
-        },
-        {
-          "file": "apps/website/public/icons/social/instagram.svg",
-          "hash": "2816002780163128951"
-        },
-        {
-          "file": "apps/website/public/icons/social/linkedin.svg",
-          "hash": "6278189176332407626"
-        },
-        {
-          "file": "apps/website/public/icons/social/reddit.svg",
-          "hash": "15788246685007975408"
-        },
-        {
-          "file": "apps/website/public/icons/social/x.svg",
-          "hash": "6438516373614685892"
-        },
-        {
-          "file": "apps/website/src/components/AcademySection.vue",
-          "hash": "11109551647672262763"
-        },
-        {
-          "file": "apps/website/src/components/CTASection.vue",
-          "hash": "4518911275111586810"
-        },
-        {
-          "file": "apps/website/src/components/CaseStudySpotlight.vue",
-          "hash": "13726103751415358074"
-        },
-        {
-          "file": "apps/website/src/components/GetStartedSection.vue",
-          "hash": "3016403179207947528"
-        },
-        {
-          "file": "apps/website/src/components/HeroSection.vue",
-          "hash": "17272837492439692"
-        },
-        {
-          "file": "apps/website/src/components/ManifestoSection.vue",
-          "hash": "2228475472171889613"
-        },
-        {
-          "file": "apps/website/src/components/ProductShowcase.vue",
-          "hash": "974655899625141763"
-        },
-        {
-          "file": "apps/website/src/components/SiteFooter.vue",
-          "hash": "10557410503210076817"
-        },
-        {
-          "file": "apps/website/src/components/SiteNav.vue",
-          "hash": "13110367483618077351"
-        },
-        {
-          "file": "apps/website/src/components/SocialProofBar.vue",
-          "hash": "13024459389894335867"
-        },
-        {
-          "file": "apps/website/src/components/TestimonialsSection.vue",
-          "hash": "4737833331820597474"
-        },
-        {
-          "file": "apps/website/src/components/UseCaseSection.vue",
-          "hash": "1480237666599727117"
-        },
-        {
-          "file": "apps/website/src/components/ValuePillars.vue",
-          "hash": "3647966655077524230"
-        },
-        {
-          "file": "apps/website/src/env.d.ts",
-          "hash": "12247281929465002553"
-        },
-        {
-          "file": "apps/website/src/layouts/BaseLayout.astro",
-          "hash": "5126908745299804875"
-        },
-        {
-          "file": "apps/website/src/pages/index.astro",
-          "hash": "10880915943998508292"
-        },
-        {
-          "file": "apps/website/src/pages/zh-CN/index.astro",
-          "hash": "12979658008561550809"
-        },
-        {
-          "file": "apps/website/src/styles/global.css",
-          "hash": "6856182582919917027"
-        },
-        {
-          "file": "apps/website/tsconfig.json",
-          "hash": "2300212129000314804"
-        }
-      ],
-      "@comfyorg/registry-types": [
-        {
-          "file": "packages/registry-types/package.json",
-          "hash": "15990484525061206373"
-        },
-        {
-          "file": "packages/registry-types/src/comfyRegistryTypes.ts",
-          "hash": "6046970705788808038"
-        },
-        {
-          "file": "packages/registry-types/tsconfig.json",
-          "hash": "17840139469220099341"
-        }
-      ],
       "@comfyorg/design-system": [
         {
           "file": "packages/design-system/package.json",
@@ -10403,318 +10802,8 @@
           "file": "packages/design-system/tsconfig.json",
           "hash": "17840139469220099341"
         }
-      ],
-      "@comfyorg/desktop-ui": [
-        {
-          "file": "apps/desktop-ui/.storybook/main.ts",
-          "hash": "11667216883933297871"
-        },
-        {
-          "file": "apps/desktop-ui/.storybook/preview.ts",
-          "hash": "2918295275751099406"
-        },
-        {
-          "file": "apps/desktop-ui/components.d.ts",
-          "hash": "5863147860270564535"
-        },
-        {
-          "file": "apps/desktop-ui/index.html",
-          "hash": "447705264632037939"
-        },
-        {
-          "file": "apps/desktop-ui/package.json",
-          "hash": "6294991117744253306",
-          "deps": [
-            "npm:@tailwindcss/vite",
-            "npm:@vitejs/plugin-vue",
-            "npm:dotenv",
-            "npm:unplugin-icons",
-            "npm:unplugin-vue-components",
-            "npm:vite",
-            "npm:vite-plugin-html",
-            "npm:vite-plugin-vue-devtools",
-            "npm:vue-tsc",
-            "npm:@comfyorg/comfyui-electron-types",
-            "@comfyorg/shared-frontend-utils",
-            "npm:@primevue/core",
-            "npm:@primevue/themes",
-            "npm:@vueuse/core",
-            "npm:pinia",
-            "npm:primeicons",
-            "npm:primevue",
-            "npm:vue",
-            "npm:vue-i18n",
-            "npm:vue-router"
-          ]
-        },
-        {
-          "file": "apps/desktop-ui/src/App.vue",
-          "hash": "15313125319171422141"
-        },
-        {
-          "file": "apps/desktop-ui/src/components/bottomPanel/tabs/terminal/BaseTerminal.vue",
-          "hash": "2156714032522164840"
-        },
-        {
-          "file": "apps/desktop-ui/src/components/common/LanguageSelector.vue",
-          "hash": "6339994612807487695"
-        },
-        {
-          "file": "apps/desktop-ui/src/components/common/RefreshButton.vue",
-          "hash": "5300771056480787171"
-        },
-        {
-          "file": "apps/desktop-ui/src/components/common/StartupDisplay.vue",
-          "hash": "6613899507506417780"
-        },
-        {
-          "file": "apps/desktop-ui/src/components/common/UrlInput.vue",
-          "hash": "5489071527865941730"
-        },
-        {
-          "file": "apps/desktop-ui/src/components/install/DesktopSettingsConfiguration.vue",
-          "hash": "6950774249673755326"
-        },
-        {
-          "file": "apps/desktop-ui/src/components/install/GpuPicker.stories.ts",
-          "hash": "5099610770830761375"
-        },
-        {
-          "file": "apps/desktop-ui/src/components/install/GpuPicker.vue",
-          "hash": "7982498086670973089"
-        },
-        {
-          "file": "apps/desktop-ui/src/components/install/HardwareOption.stories.ts",
-          "hash": "13232360462274147863"
-        },
-        {
-          "file": "apps/desktop-ui/src/components/install/HardwareOption.vue",
-          "hash": "11173586354050356532"
-        },
-        {
-          "file": "apps/desktop-ui/src/components/install/InstallFooter.vue",
-          "hash": "13425063352044590390"
-        },
-        {
-          "file": "apps/desktop-ui/src/components/install/InstallLocationPicker.stories.ts",
-          "hash": "17643291949510645332"
-        },
-        {
-          "file": "apps/desktop-ui/src/components/install/InstallLocationPicker.vue",
-          "hash": "860250354085098185"
-        },
-        {
-          "file": "apps/desktop-ui/src/components/install/MigrationPicker.stories.ts",
-          "hash": "4847562240921103194"
-        },
-        {
-          "file": "apps/desktop-ui/src/components/install/MigrationPicker.vue",
-          "hash": "4696366302387119996"
-        },
-        {
-          "file": "apps/desktop-ui/src/components/install/mirror/MirrorItem.vue",
-          "hash": "14083561835657551976"
-        },
-        {
-          "file": "apps/desktop-ui/src/components/maintenance/StatusTag.vue",
-          "hash": "16646614912422032482"
-        },
-        {
-          "file": "apps/desktop-ui/src/components/maintenance/TaskCard.vue",
-          "hash": "15906386119733805680"
-        },
-        {
-          "file": "apps/desktop-ui/src/components/maintenance/TaskListItem.vue",
-          "hash": "664297759459588801"
-        },
-        {
-          "file": "apps/desktop-ui/src/components/maintenance/TaskListPanel.vue",
-          "hash": "9166135965686468633"
-        },
-        {
-          "file": "apps/desktop-ui/src/components/maintenance/TaskListStatusIcon.vue",
-          "hash": "12812333377020349527"
-        },
-        {
-          "file": "apps/desktop-ui/src/components/maintenance/TerminalOutputDrawer.vue",
-          "hash": "11990753862748071467"
-        },
-        {
-          "file": "apps/desktop-ui/src/composables/bottomPanelTabs/useTerminal.ts",
-          "hash": "3866363396833649521"
-        },
-        {
-          "file": "apps/desktop-ui/src/composables/bottomPanelTabs/useTerminalBuffer.ts",
-          "hash": "15007241272904968214"
-        },
-        {
-          "file": "apps/desktop-ui/src/constants/desktopDialogs.ts",
-          "hash": "1503669697939940754"
-        },
-        {
-          "file": "apps/desktop-ui/src/constants/desktopMaintenanceTasks.ts",
-          "hash": "11488461812222847325"
-        },
-        {
-          "file": "apps/desktop-ui/src/constants/uvMirrors.ts",
-          "hash": "10492037419005389069"
-        },
-        {
-          "file": "apps/desktop-ui/src/i18n.ts",
-          "hash": "4763860765260309258"
-        },
-        {
-          "file": "apps/desktop-ui/src/main.ts",
-          "hash": "15757938088796392975"
-        },
-        {
-          "file": "apps/desktop-ui/src/router.ts",
-          "hash": "8124914338581258777"
-        },
-        {
-          "file": "apps/desktop-ui/src/stores/maintenanceTaskStore.ts",
-          "hash": "6220641646562639012"
-        },
-        {
-          "file": "apps/desktop-ui/src/types/desktop/index.d.ts",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/desktop-ui/src/types/desktop/maintenanceTypes.ts",
-          "hash": "12768145698308844758"
-        },
-        {
-          "file": "apps/desktop-ui/src/types/global.d.ts",
-          "hash": "14408774019938894292"
-        },
-        {
-          "file": "apps/desktop-ui/src/types/primeVueTypes.ts",
-          "hash": "12734798163506737093"
-        },
-        {
-          "file": "apps/desktop-ui/src/utils/electronMirrorCheck.ts",
-          "hash": "17635597101245388740"
-        },
-        {
-          "file": "apps/desktop-ui/src/utils/envUtil.ts",
-          "hash": "10229510362439300547"
-        },
-        {
-          "file": "apps/desktop-ui/src/utils/refUtil.ts",
-          "hash": "16879854420473998632"
-        },
-        {
-          "file": "apps/desktop-ui/src/utils/tailwindUtil.ts",
-          "hash": "7680272001200958825"
-        },
-        {
-          "file": "apps/desktop-ui/src/utils/validationUtil.ts",
-          "hash": "12189278036130599680"
-        },
-        {
-          "file": "apps/desktop-ui/src/views/DesktopDialogView.vue",
-          "hash": "15919046656271727151"
-        },
-        {
-          "file": "apps/desktop-ui/src/views/DesktopStartView.vue",
-          "hash": "11320718888577794213"
-        },
-        {
-          "file": "apps/desktop-ui/src/views/DesktopUpdateView.vue",
-          "hash": "818913185865554788"
-        },
-        {
-          "file": "apps/desktop-ui/src/views/DownloadGitView.vue",
-          "hash": "6243052052359266143"
-        },
-        {
-          "file": "apps/desktop-ui/src/views/InstallView.stories.ts",
-          "hash": "3592363160454333192"
-        },
-        {
-          "file": "apps/desktop-ui/src/views/InstallView.vue",
-          "hash": "16938378394036614575"
-        },
-        {
-          "file": "apps/desktop-ui/src/views/MaintenanceView.stories.ts",
-          "hash": "8917853251408091980"
-        },
-        {
-          "file": "apps/desktop-ui/src/views/MaintenanceView.vue",
-          "hash": "5594245183073566869"
-        },
-        {
-          "file": "apps/desktop-ui/src/views/ManualConfigurationView.vue",
-          "hash": "14677957633081587400"
-        },
-        {
-          "file": "apps/desktop-ui/src/views/MetricsConsentView.vue",
-          "hash": "15680028190662910935"
-        },
-        {
-          "file": "apps/desktop-ui/src/views/NotSupportedView.vue",
-          "hash": "11556146905305055084"
-        },
-        {
-          "file": "apps/desktop-ui/src/views/ServerStartView.vue",
-          "hash": "12340967311219444773"
-        },
-        {
-          "file": "apps/desktop-ui/src/views/WelcomeView.vue",
-          "hash": "1431719777957907640"
-        },
-        {
-          "file": "apps/desktop-ui/src/views/layouts/LayoutDefault.vue",
-          "hash": "16297362740357998730"
-        },
-        {
-          "file": "apps/desktop-ui/src/views/templates/BaseViewTemplate.vue",
-          "hash": "17576926767488136495"
-        },
-        {
-          "file": "apps/desktop-ui/tsconfig.json",
-          "hash": "9432173101889909877"
-        },
-        {
-          "file": "apps/desktop-ui/vite.config.mts",
-          "hash": "3264715239357970616"
-        }
-      ],
-      "@comfyorg/ingest-types": [
-        {
-          "file": "packages/ingest-types/.gitignore",
-          "hash": "2503726497279607463"
-        },
-        {
-          "file": "packages/ingest-types/openapi-ts.config.ts",
-          "hash": "10938332729030695002"
-        },
-        {
-          "file": "packages/ingest-types/package.json",
-          "hash": "13344767453568624111",
-          "deps": [
-            "npm:@hey-api/openapi-ts",
-            "npm:zod"
-          ]
-        },
-        {
-          "file": "packages/ingest-types/src/index.ts",
-          "hash": "11365959679696260584"
-        },
-        {
-          "file": "packages/ingest-types/src/types.gen.ts",
-          "hash": "15967420300452493236"
-        },
-        {
-          "file": "packages/ingest-types/src/zod.gen.ts",
-          "hash": "14172061334481991892"
-        },
-        {
-          "file": "packages/ingest-types/tsconfig.json",
-          "hash": "10024138369231482624"
-        }
       ]
     }
   },
-  "externalNodesHash": "11763838782598171671"
+  "externalNodesHash": "16839972320432739217"
 }

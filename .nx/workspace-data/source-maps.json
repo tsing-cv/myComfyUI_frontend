@@ -1660,6 +1660,10 @@
       "playwright.config.ts",
       "@nx/playwright/plugin"
     ],
+    "metadata.targetGroups.E2E (CI).141": [
+      "playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
     "targets.e2e": [
       "playwright.config.ts",
       "@nx/playwright/plugin"
@@ -7977,6 +7981,74 @@
       "@nx/playwright/plugin"
     ],
     "targets.e2e-ci--browser_tests/tests/subgraph/subgraphCrud.spec.ts.metadata.help.example": [
+      "playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--browser_tests/tests/subgraph/subgraphDraftPositions.spec.ts": [
+      "playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--browser_tests/tests/subgraph/subgraphDraftPositions.spec.ts.options": [
+      "playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--browser_tests/tests/subgraph/subgraphDraftPositions.spec.ts.metadata": [
+      "playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--browser_tests/tests/subgraph/subgraphDraftPositions.spec.ts.parallelism": [
+      "playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--browser_tests/tests/subgraph/subgraphDraftPositions.spec.ts.cache": [
+      "playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--browser_tests/tests/subgraph/subgraphDraftPositions.spec.ts.inputs": [
+      "playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--browser_tests/tests/subgraph/subgraphDraftPositions.spec.ts.outputs": [
+      "playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--browser_tests/tests/subgraph/subgraphDraftPositions.spec.ts.executor": [
+      "playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--browser_tests/tests/subgraph/subgraphDraftPositions.spec.ts.options.cwd": [
+      "playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--browser_tests/tests/subgraph/subgraphDraftPositions.spec.ts.options.env": [
+      "playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--browser_tests/tests/subgraph/subgraphDraftPositions.spec.ts.options.command": [
+      "playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--browser_tests/tests/subgraph/subgraphDraftPositions.spec.ts.metadata.technologies": [
+      "playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--browser_tests/tests/subgraph/subgraphDraftPositions.spec.ts.metadata.technologies.0": [
+      "playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--browser_tests/tests/subgraph/subgraphDraftPositions.spec.ts.metadata.description": [
+      "playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--browser_tests/tests/subgraph/subgraphDraftPositions.spec.ts.metadata.help": [
+      "playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--browser_tests/tests/subgraph/subgraphDraftPositions.spec.ts.metadata.help.command": [
+      "playwright.config.ts",
+      "@nx/playwright/plugin"
+    ],
+    "targets.e2e-ci--browser_tests/tests/subgraph/subgraphDraftPositions.spec.ts.metadata.help.example": [
       "playwright.config.ts",
       "@nx/playwright/plugin"
     ],

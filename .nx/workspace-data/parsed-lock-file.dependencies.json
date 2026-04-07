@@ -375,6 +375,21 @@
     "type": "static"
   },
   {
+    "source": "npm:@astrojs/sitemap",
+    "target": "npm:sitemap",
+    "type": "static"
+  },
+  {
+    "source": "npm:@astrojs/sitemap",
+    "target": "npm:stream-replace-string",
+    "type": "static"
+  },
+  {
+    "source": "npm:@astrojs/sitemap",
+    "target": "npm:zod@4.3.6",
+    "type": "static"
+  },
+  {
     "source": "npm:@astrojs/telemetry",
     "target": "npm:ci-info",
     "type": "static"
@@ -6512,6 +6527,11 @@
   {
     "source": "npm:@types/react",
     "target": "npm:csstype",
+    "type": "static"
+  },
+  {
+    "source": "npm:@types/sax",
+    "target": "npm:@types/node@25.0.3",
     "type": "static"
   },
   {
@@ -18242,6 +18262,26 @@
   {
     "source": "npm:sirv",
     "target": "npm:totalist",
+    "type": "static"
+  },
+  {
+    "source": "npm:sitemap",
+    "target": "npm:@types/node",
+    "type": "static"
+  },
+  {
+    "source": "npm:sitemap",
+    "target": "npm:@types/sax",
+    "type": "static"
+  },
+  {
+    "source": "npm:sitemap",
+    "target": "npm:arg",
+    "type": "static"
+  },
+  {
+    "source": "npm:sitemap",
+    "target": "npm:sax",
     "type": "static"
   },
   {

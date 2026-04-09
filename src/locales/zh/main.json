@@ -194,8 +194,7 @@
     "uploadModelHelpVideo": "上传模型视频",
     "uploadModelHowDoIFindThis": "如何找到这个？",
     "uploadSuccess": "模型导入成功！",
-    "uploadingModel": "正在导入模型...",
-    "searchAssetsPlaceholder": "搜索资源..."
+    "uploadingModel": "正在导入模型..."
   },
   "auth": {
     "apiKey": {
@@ -217,14 +216,7 @@
       "whitelistInfo": "关于非白名单网站"
     },
     "deleteAccount": {
-      "contactSupport": "如需删除您的账户，请联系 {email}",
-      "cancel": "取消",
-      "confirm": "删除账户",
-      "confirmMessage": "您确定要删除您的账户吗？此操作无法撤销，并且会永久删除您的所有数据。",
-      "confirmTitle": "删除账户",
-      "deleteAccount": "删除账户",
-      "success": "账户已删除",
-      "successDetail": "您的账户已成功删除。"
+      "contactSupport": "如需删除您的账户，请联系 {email}"
     },
     "errors": {
       "auth/cancelled-popup-request": "登录已取消。请重试。",
@@ -354,13 +346,6 @@
     "missingNodesWarning": "工作流包含不支持的节点（红色突出显示）。",
     "share": "分享",
     "workflowActions": "工作流操作"
-  },
-  "chatHistory": {
-    "cancelEdit": "取消",
-    "cancelEditTooltip": "取消编辑",
-    "copiedTooltip": "已复制",
-    "copyTooltip": "复制消息到剪贴板",
-    "editTooltip": "编辑消息"
   },
   "builderFooter": {
     "opensAsApp": "以 {mode} 模式打开",
@@ -859,8 +844,7 @@
     "VIDEO": "视频",
     "VOXEL": "体素",
     "WAN_CAMERA_EMBEDDING": "WAN 摄像头嵌入",
-    "WEBCAM": "摄像头",
-    "LOAD_3D_ANIMATION": "加载3D动画"
+    "WEBCAM": "摄像头"
   },
   "desktopDialogs": {
     "": {
@@ -1347,6 +1331,7 @@
     "updating": "更新中",
     "upload": "上传",
     "uploadAlreadyInProgress": "上传已在进行中",
+    "uploadTimedOut": "上传超时。请重试。",
     "usageHint": "使用提示",
     "use": "使用",
     "user": "用户",
@@ -1393,7 +1378,6 @@
     "desktopUserGuide": "桌面端用户指南",
     "docs": "文档",
     "feedback": "提交反馈",
-    "Discord": "讨论区",
     "github": "Github",
     "help": "帮助和支持",
     "loadingReleases": "加载发布信息...",
@@ -1410,8 +1394,7 @@
     "updateComfyUIStartedDetail": "正在更新 ComfyUI，请稍等...",
     "updateComfyUISuccess": "更新完成",
     "updateComfyUISuccessDetail": "ComfyUI 已更新，正在重启...",
-    "whatsNew": "新功能?",
-    "helpFeedback": "帮助与反馈"
+    "whatsNew": "新功能?"
   },
   "icon": {
     "bookmark": "书签",
@@ -1711,9 +1694,7 @@
     "coreNodesFromVersion": "核心节点来源于 {version} 版本。",
     "outdatedVersion": "这个工作流由新版 ComfyUI（{version}）创建，部分节点可能无法正常运行。",
     "outdatedVersionGeneric": "这个工作流由新版 ComfyUI 创建，部分节点可能无法正常运行。",
-    "unknownVersion": "未知",
-    "missingNodesDescription": "在加载工作流时，以下节点未找到。\n这也可能是因为你的ComfyUI版本过低，无法找到新的核心节点。",
-    "missingNodesTitle": "某些节点缺失"
+    "unknownVersion": "未知"
   },
   "maintenance": {
     "None": "无",
@@ -1941,30 +1922,7 @@
     "title": "遮罩编辑器",
     "tolerance": "阈值",
     "undo": "撤回",
-    "white": "白",
-    "Apply to Whole Image": "应用到整个图像",
-    "Brush Settings": "笔刷设置",
-    "Brush Shape": "笔刷形状",
-    "Clear": "清空",
-    "Color Select Settings": "颜色选择设置",
-    "Fill Opacity": "填充不透明度",
-    "Hardness": "硬度",
-    "Image Layer": "图像图层",
-    "Invert": "反转",
-    "Layers": "图层",
-    "Live Preview": "实时预览",
-    "Mask Layer": "遮罩图层",
-    "Mask Opacity": "遮罩不透明度",
-    "Mask Tolerance": "遮罩容差",
-    "Method": "方法",
-    "Opacity": "不透明度",
-    "Paint Bucket Settings": "油漆桶设置",
-    "Reset to Default": "恢复默认",
-    "Selection Opacity": "选区不透明度",
-    "Smoothing Precision": "平滑精度",
-    "Stop at mask": "在遮罩处停止",
-    "Thickness": "粗细",
-    "Tolerance": "容差"
+    "white": "白"
   },
   "mediaAsset": {
     "actions": {
@@ -2190,9 +2148,7 @@
     "Zoom In": "放大画面",
     "Zoom Out": "缩小画面",
     "Zoom to fit": "缩放以适应",
-    "linearMode_appModeToolbar_apps": "linearMode.appModeToolbar.apps",
-    "Queue Panel": "队列面板",
-    "Toggle the Custom Nodes Manager Progress Bar": "切换自定义节点管理器进度条"
+    "linearMode_appModeToolbar_apps": "linearMode.appModeToolbar.apps"
   },
   "minimap": {
     "nodeColors": "节点颜色",
@@ -2214,9 +2170,7 @@
     "reEnableInSettings": "可在{link}中重新启用",
     "reEnableInSettingsLink": "设置",
     "title": "此工作流缺少模型",
-    "totalSize": "总下载大小：",
-    "missingModels": "缺少模型",
-    "missingModelsMessage": "加载工作流时，未找到以下模型"
+    "totalSize": "总下载大小："
   },
   "missingNodes": {
     "cloud": {
@@ -2249,19 +2203,47 @@
   },
   "nodeCategories": {
     "": "",
-    "_for_testing": "_用于测试",
     "3d": "3d",
     "3d_models": "3D模型",
+    "BFL": "BFL",
+    "Bria": "Bria",
+    "ByteDance": "字节跳动",
+    "ElevenLabs": "ElevenLabs",
+    "Gemini": "Gemini",
+    "Grok": "Grok",
+    "HitPaw": "HitPaw",
+    "Ideogram": "Ideogram",
+    "Kling": "Kling",
+    "LTXV": "LTXV",
+    "Luma": "Luma",
+    "Magnific": "Magnific",
+    "Meshy": "Meshy",
+    "MiniMax": "MiniMax",
+    "Moonvalley Marey": "Moonvalley Marey",
+    "OpenAI": "OpenAI",
+    "PixVerse": "PixVerse",
+    "Quiver": "Quiver",
+    "Recraft": "Recraft",
+    "Reve": "Reve",
+    "Rodin": "Rodin",
+    "Runway": "Runway",
+    "Sora": "Sora",
+    "Stability AI": "Stability AI",
+    "Tencent": "Tencent",
+    "Topaz": "Topaz",
+    "Tripo": "Tripo",
+    "Veo": "Veo",
+    "Vidu": "Vidu",
+    "Wan": "Wan万相",
+    "WaveSpeed": "WaveSpeed",
+    "_for_testing": "_用于测试",
     "advanced": "高级",
     "animation": "动画",
     "api": "API",
     "api node": "api 节点",
     "attention_experiments": "注意力实验",
     "audio": "音频",
-    "BFL": "BFL",
     "batch": "批处理",
-    "Bria": "Bria",
-    "ByteDance": "字节跳动",
     "camera": "相机",
     "chroma_radiance": "chroma_radiance",
     "clip": "CLIP",
@@ -2270,9 +2252,7 @@
     "cond pair": "条件对",
     "cond single": "条件单",
     "conditioning": "条件",
-    "collectors": "采集器",
     "context": "上下文",
-    "control": "控制",
     "controlnet": "ControlNet",
     "create": "创建",
     "custom_sampling": "自定义采样",
@@ -2281,62 +2261,33 @@
     "deprecated": "已弃用",
     "detection": "检测",
     "edit_models": "编辑模型",
-    "ElevenLabs": "ElevenLabs",
-    "file": "文件",
     "flux": "Flux",
-    "Gemini": "Gemini",
     "gligen": "GLIGEN",
-    "Grok": "Grok",
     "guidance": "引导",
     "guiders": "引导器",
-    "HitPaw": "HitPaw",
     "hooks": "约束",
-    "Ideogram": "Ideogram",
     "image": "图像",
     "inpaint": "局部重绘",
     "instructpix2pix": "InstructPix2Pix",
     "kandinsky5": "kandinsky5",
-    "Kling": "Kling",
     "latent": "Latent",
-    "LayerColor": "图层颜色",
-    "LayerFilter": "图层过滤",
-    "LayerMask": "图层遮罩",
-    "LayerStyle": "图层样式",
-    "LayerUtility": "图层工具",
     "loaders": "加载器",
     "logic": "逻辑",
     "lotus": "lotus",
-    "LTXV": "LTXV",
     "ltxv": "LTXV",
-    "Luma": "Luma",
-    "Magnific": "Magnific",
     "mask": "遮罩",
     "math": "数学",
-    "Meshy": "Meshy",
-    "MiniMax": "MiniMax",
     "model": "模型",
     "model_merging": "模型合并",
     "model_patches": "模型微调",
     "model_specific": "模型特定",
-    "moltbot": "龙虾机器人",
-    "Moonvalley Marey": "Moonvalley Marey",
-    "motion_tracking": "运动跟踪",
     "noise": "噪波",
     "operations": "操作",
-    "OpenAI": "OpenAI",
     "photomaker": "PhotoMaker",
-    "PixVerse": "PixVerse",
     "postprocessing": "后处理",
     "preprocessors": "预处理器",
     "primitive": "基础",
-    "prompts": "提示（词）",
-    "Pika": "Pika",
-    "Quiver": "Quiver",
     "qwen": "Qwen千问",
-    "Recraft": "Recraft",
-    "Reve": "Reve",
-    "Rodin": "Rodin",
-    "Runway": "Runway",
     "samplers": "采样器",
     "sampling": "采样",
     "save": "保存",
@@ -2344,31 +2295,21 @@
     "scheduling": "调度",
     "sd": "sd",
     "sd3": "SD3",
-    "segment": "语义分割",
     "shader": "shader",
     "sigmas": "Sigmas",
-    "Sora": "Sora",
-    "Stability AI": "Stability AI",
     "stable_cascade": "StableCascade",
     "string": "字符串",
     "style_model": "风格模型",
     "text": "文本",
     "textgen": "textgen",
-    "Tencent": "Tencent",
-    "Topaz": "Topaz",
     "training": "训练",
     "transform": "变换",
-    "Tripo": "Tripo",
     "unet": "U-Net",
     "upscale_diffusion": "放大扩散",
     "upscaling": "放大",
     "utils": "工具",
-    "Veo": "Veo",
     "video": "视频",
     "video_models": "视频模型",
-    "Vidu": "Vidu",
-    "Wan": "Wan万相",
-    "WaveSpeed": "WaveSpeed",
     "zimage": "zimage"
   },
   "nodeErrors": {
@@ -2949,8 +2890,7 @@
     "VueNodes": "Nodes 2.0",
     "Window": "窗口",
     "Workflow": "工作流",
-    "Workspace": "工作区",
-    "NewEditor": "新编辑器"
+    "Workspace": "工作区"
   },
   "shape": {
     "CARD": "卡片",
@@ -3180,19 +3120,7 @@
         "open": "打开"
       }
     },
-    "workflows": "工作流",
-    "queueTab": {
-      "backToAllTasks": "返回",
-      "clearPendingTasks": "清除待处理任务",
-      "containImagePreview": "填充图像预览",
-      "coverImagePreview": "适应图像预览",
-      "filter": "过滤输出",
-      "filters": {
-        "hideCached": "隐藏缓存",
-        "hideCanceled": "隐藏已取消"
-      },
-      "showFlatList": "平铺结果"
-    }
+    "workflows": "工作流"
   },
   "subgraphStore": {
     "blueprintName": "子工作流名称",

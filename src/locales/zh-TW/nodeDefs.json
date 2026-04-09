@@ -5007,10 +5007,10 @@
     }
   },
   "ImageHistogram": {
-    "display_name": "图像直方图",
+    "display_name": "影像直方圖",
     "inputs": {
       "image": {
-        "name": "图像"
+        "name": "影像"
       }
     },
     "outputs": {
@@ -5023,15 +5023,15 @@
         "tooltip": null
       },
       "2": {
-        "name": "红色",
+        "name": "紅色",
         "tooltip": null
       },
       "3": {
-        "name": "绿色",
+        "name": "綠色",
         "tooltip": null
       },
       "4": {
-        "name": "蓝色",
+        "name": "藍色",
         "tooltip": null
       }
     }

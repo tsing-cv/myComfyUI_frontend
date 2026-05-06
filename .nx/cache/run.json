@@ -1,8 +1,8 @@
 {
   "run": {
     "command": "nx build",
-    "startTime": "2026-04-28T14:01:51.593Z",
-    "endTime": "2026-04-28T14:02:03.709Z",
+    "startTime": "2026-05-06T16:53:01.579Z",
+    "endTime": "2026-05-06T16:53:14.480Z",
     "inner": false
   },
   "tasks": [
@@ -10,9 +10,9 @@
       "taskId": "@comfyorg/comfyui-frontend:build",
       "target": "build",
       "projectName": "@comfyorg/comfyui-frontend",
-      "hash": "17169485952227851605",
-      "startTime": "2026-04-28T14:01:51.687Z",
-      "endTime": "2026-04-28T14:02:03.507Z",
+      "hash": "16576225518110454292",
+      "startTime": "2026-05-06T16:53:01.672Z",
+      "endTime": "2026-05-06T16:53:13.889Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 0
